@@ -1,0 +1,22 @@
+[
+  {
+    "id": "fever-1af85724-289d-46e6-a957-3efe1b3b7827",
+    "title": "Support example",
+    "text": "The Jackson family included American singers and songwriters.",
+    "evidence_text": "Jackson family . As a group , the eldest sons Jackie , Tito , Jermaine , Marlon , Randy and Michael , made the family 's reputation , facilitating the subsequent success of siblings Rebbie , La Toya , and Janet . Janet Damita Jo Jackson ( born May 16 , 1966 ) is an American singer , songwriter , dancer and actress . Michael Joseph Jackson ( August 29 , 1958 -- June 25 , 2009 ) was an American singer , songwriter , record producer , dancer , actor , and philanthropist .",
+    "search_web": false,
+    "caption": "A frozen FEVER-NLI test pair with supplied evidence. Chosen by dataset, gold label, length and file order—not model correctness. Dataset relation: entailment.",
+    "dataset": "FEVER-NLI",
+    "gold_label": "entailment"
+  },
+  {
+    "id": "fever-0dc35c51-6677-4887-88c0-d2231d811be2",
+    "title": "Contradiction example",
+    "text": "George H. W. Bush retired from all politics in 1980.",
+    "evidence_text": "George H. W. Bush . Bush ran for president in 1980 but was defeated in the Republican primary by Ronald Reagan . Domestically , Bush reneged on a 1988 campaign promise and , after a struggle with Congress , signed an increase in taxes that Congress had passed .",
+    "search_web": false,
+    "caption": "A frozen FEVER-NLI test pair with supplied evidence. Chosen by dataset, gold label, length and file order—not model correctness. Dataset relation: contradiction.",
+    "dataset": "FEVER-NLI",
+    "gold_label": "contradiction"
+  }
+]

@@ -1,0 +1,656 @@
+{
+  "checked_at": "2026-10-26T01:07:57.463115+00:00",
+  "deployment_id": "dpl_DbURw772eMrpxYruFbD2YfLfNFoh",
+  "url": "https://manan-dl-news-lens.vercel.app",
+  "automated_checks": {
+    "passed": 153,
+    "skipped": 0,
+    "scope": "V2 source/pipeline/API regression suite, plus focused search-failure UI label regression."
+  },
+  "health": {
+    "status": "ready",
+    "model_loaded": true,
+    "runtime_self_test": "passed",
+    "inference": "Python ONNX Runtime",
+    "external_classification_api": false,
+    "external_search": "Exa",
+    "model_sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+    "version": "2.1.0"
+  },
+  "cases": {
+    "screenshot": {
+      "assessment": "insufficient_evidence",
+      "label": "Model needs review",
+      "summary": "0 of 1 checked statements are supported; 0 contradicted; 1 unresolved.",
+      "claims": [
+        {
+          "id": "C1",
+          "text": "kharge telling modi tera baap bhi jayega",
+          "verdict": "insufficient_evidence",
+          "label": "Evidence found; review required",
+          "review_reason": "model_uncertain",
+          "evidence_summary": {
+            "sources_found": 5,
+            "sources_compared": 3,
+            "passages_compared": 3,
+            "decisive_support_sources": 0,
+            "decisive_contradiction_sources": 0
+          },
+          "scores": {
+            "contradiction": 0.07134509001826686,
+            "entailment": 0.828869966677078,
+            "neutral": 0.09978494330465493
+          },
+          "confidence": 0.828869966677078,
+          "model_prediction": "entailment",
+          "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+          "reason": "Relevant passages were found, but the model could not confidently establish support or contradiction. This does not mean the claim is false.",
+          "evidence": [
+            {
+              "source_id": "S3",
+              "passage": "Kharge replied, \"Modi ka baap bhi jayega\" (Even Modi's father will go) Kharge replied, “Modi ka baap bhi jayega” (Even Modi’s father will go)",
+              "relevance": 0.2253,
+              "scores": {
+                "contradiction": 0.07134509001826686,
+                "entailment": 0.828869966677078,
+                "neutral": 0.09978494330465493
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "entailment",
+              "confidence": 0.828869966677078,
+              "truncated": false,
+              "token_count": 70
+            },
+            {
+              "source_id": "S2",
+              "passage": "‘Modi ka baap bhi jayega’: Kharge’s retort to heckler at Patna event sparks controversy",
+              "relevance": 0.1358,
+              "scores": {
+                "contradiction": 0.11086360230243544,
+                "entailment": 0.8135226702782229,
+                "neutral": 0.0756137274193417
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "entailment",
+              "confidence": 0.8135226702782229,
+              "truncated": false,
+              "token_count": 49
+            },
+            {
+              "source_id": "S4",
+              "passage": "“Modi ka baap bhi jayega … baap bhi jayega,” the Congress president retorted, as party workers escorted the person out of the hall. Targeting PM Modi further, Kharge called the prime minister a “habitual liar”.“PM Modi has a habit of telling lies. He had promised to bring back black money within his first 100 days.",
+              "relevance": 0.175,
+              "scores": {
+                "contradiction": 0.6630809895631484,
+                "entailment": 0.3000223595821355,
+                "neutral": 0.03689665085471598
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "contradiction",
+              "confidence": 0.6630809895631484,
+              "truncated": false,
+              "token_count": 104
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "BJP slams Kharge over ‘indecent’ remarks on PM Modi",
+          "url": "https://www.thehindu.com/news/national/bihar/kharges-remark-in-bihar-pm-modi-father-sparks-row-bjp-congress/article71623852.ece",
+          "domain": "www.thehindu.com",
+          "published_at": "2026-10-25T20:09:39+05:30",
+          "retrieved_at": "2026-10-26T01:05:19.177079+00:00",
+          "kind": "web",
+          "enrichment_status": "full_text",
+          "original_requested_url": "https://www.thehindu.com/news/national/bihar/kharges-remark-in-bihar-pm-modi-father-sparks-row-bjp-congress/article71623852.ece",
+          "page_retrieved_at": "2026-10-26T01:07:55.345229+00:00",
+          "id": "S1",
+          "used_for_claims": []
+        },
+        {
+          "title": "‘Modi ka baap bhi jayega’: Kharge’s retort to heckler at Patna event sparks controversy",
+          "url": "https://timesofindia.indiatimes.com/city/patna/modi-ka-baap-bhi-jayega-kharges-retort-to-heckler-at-patna-event-sparks-controversy/articleshow/135193530.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "published_at": "2026-10-25T20:52:00+05:30",
+          "retrieved_at": "2026-10-26T01:05:19.177248+00:00",
+          "kind": "web",
+          "enrichment_status": "full_text",
+          "original_requested_url": "https://timesofindia.indiatimes.com/city/patna/modi-ka-baap-bhi-jayega-kharges-retort-to-heckler-at-patna-event-sparks-controversy/articleshow/135193530.cms",
+          "page_retrieved_at": "2026-10-26T01:07:55.272432+00:00",
+          "id": "S2",
+          "used_for_claims": [
+            "C1"
+          ]
+        },
+        {
+          "title": "Kharge replied, \"Modi ka baap bhi jayega\" (Even Modi's father will go)",
+          "url": "https://ndtv-india.com/news/national/kharge-replied-modi-ka-baap-bhi-jayega-even-modi-s-father-will-go/",
+          "domain": "ndtv-india.com",
+          "published_at": "2026-10-25T14:50:11.000Z",
+          "retrieved_at": "2026-10-26T01:05:19.177329+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://ndtv-india.com/news/national/kharge-replied-modi-ka-baap-bhi-jayega-even-modi-s-father-will-go/",
+          "id": "S3",
+          "used_for_claims": [
+            "C1"
+          ]
+        },
+        {
+          "title": "Mallikarjun Kharge's 'baap' remark on PM Modi sparks row ...",
+          "url": "https://timesofindia.indiatimes.com/india/mallikarjun-kharges-baap-remark-on-pm-modi-sparks-row-bjp-hits-back/articleshow/135191593.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "published_at": "2026-10-25T13:00:00.000Z",
+          "retrieved_at": "2026-10-26T01:05:19.177411+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://timesofindia.indiatimes.com/india/mallikarjun-kharges-baap-remark-on-pm-modi-sparks-row-bjp-hits-back/articleshow/135191593.cms",
+          "id": "S4",
+          "used_for_claims": [
+            "C1"
+          ]
+        },
+        {
+          "title": "'Baap' Jibe Latest In M Kharge's Controversial Comments On PM Modi: From 'Terrorist' To 'Snake' To 'Hang Himself'",
+          "url": "https://www.ndtv.com/india-news/baap-jibe-latest-in-m-kharges-controversial-comments-on-pm-modi-from-terrorist-to-snake-to-hang-himself-12234106",
+          "domain": "www.ndtv.com",
+          "published_at": "2026-10-25T14:35:31.000Z",
+          "retrieved_at": "2026-10-26T01:05:19.177484+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://www.ndtv.com/india-news/baap-jibe-latest-in-m-kharges-controversial-comments-on-pm-modi-from-terrorist-to-snake-to-hang-himself-12234106",
+          "id": "S5",
+          "used_for_claims": []
+        }
+      ],
+      "coverage": {
+        "total_sentences": 1,
+        "checked_claims": 1,
+        "supported": 0,
+        "contradicted": 0,
+        "conflicting": 0,
+        "insufficient_evidence": 1,
+        "omitted": 0
+      },
+      "search": {
+        "status": "ok",
+        "queries": [
+          "Reports and primary sources about: kharge telling modi tera baap bhi jayega"
+        ],
+        "provider": "Exa",
+        "message": "Retrieved related sources; passages are checked separately for each statement.",
+        "queries_succeeded": 1,
+        "queries_failed": 0
+      },
+      "warnings": [],
+      "word_count": 7,
+      "source_usage": {
+        "sources_found": 5,
+        "sources_compared": 3,
+        "passages_compared": 3,
+        "decisive_support_sources": 0,
+        "decisive_contradiction_sources": 0
+      },
+      "timings": {
+        "retrieval_ms": 0,
+        "enrichment_ms": 245,
+        "ranking_ms": 31,
+        "inference_ms": 206,
+        "model_loading_ms": 0,
+        "handler_total_ms": 483
+      },
+      "comparisons": 3,
+      "model": {
+        "name": "Fine-tuned MiniLM evidence NLI",
+        "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+        "max_tokens": 256
+      },
+      "latency_ms": 483,
+      "limitations": [
+        "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+        "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+        "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+      ]
+    },
+    "supplied_evidence": {
+      "assessment": "supported",
+      "label": "Checked claims supported",
+      "summary": "1 of 1 checked statements are supported; 0 contradicted; 0 unresolved.",
+      "claims": [
+        {
+          "id": "C1",
+          "text": "The helicopter's first flight lasted 39.1 seconds.",
+          "verdict": "supported",
+          "label": "Supported by this evidence",
+          "review_reason": null,
+          "evidence_summary": {
+            "sources_found": 1,
+            "sources_compared": 1,
+            "passages_compared": 3,
+            "decisive_support_sources": 1,
+            "decisive_contradiction_sources": 0
+          },
+          "scores": {
+            "contradiction": 0.010511392447799948,
+            "entailment": 0.9754193576784861,
+            "neutral": 0.014069249873713956
+          },
+          "confidence": 0.9754193576784861,
+          "model_prediction": "entailment",
+          "decision_reason": "The validation-selected threshold and margin are met.",
+          "reason": "A compared passage supports this statement above the validation-selected threshold.",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "passage": "NASA's Ingenuity helicopter achieved the first powered, controlled flight on Mars on April 19, 2021. Its first flight lasted 39.1 seconds.",
+              "relevance": 0.421,
+              "scores": {
+                "contradiction": 0.010511392447799948,
+                "entailment": 0.9754193576784861,
+                "neutral": 0.014069249873713956
+              },
+              "relation": "entailment",
+              "decision": "decisive",
+              "decision_reason": "The validation-selected threshold and margin are met.",
+              "raw_relation": "entailment",
+              "confidence": 0.9754193576784861,
+              "truncated": false,
+              "token_count": 45
+            },
+            {
+              "source_id": "S1",
+              "passage": "NASA's Ingenuity helicopter achieved the first powered, controlled flight on Mars on April 19, 2021.",
+              "relevance": 0.1174,
+              "scores": {
+                "contradiction": 0.049387368452665455,
+                "entailment": 0.019913663442223197,
+                "neutral": 0.9306989681051112
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+              "raw_relation": "neutral",
+              "confidence": 0.9306989681051112,
+              "truncated": false,
+              "token_count": 36
+            },
+            {
+              "source_id": "S1",
+              "passage": "Its first flight lasted 39.1 seconds.",
+              "relevance": 0.746,
+              "scores": {
+                "contradiction": 0.1204543323266318,
+                "entailment": 0.0344793672459152,
+                "neutral": 0.845066300427453
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+              "raw_relation": "neutral",
+              "confidence": 0.845066300427453,
+              "truncated": false,
+              "token_count": 24
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Source passage you supplied",
+          "url": null,
+          "domain": "Supplied text",
+          "published_at": null,
+          "retrieved_at": "2026-10-26T01:07:56.792741+00:00",
+          "kind": "supplied",
+          "id": "S1",
+          "used_for_claims": [
+            "C1"
+          ]
+        }
+      ],
+      "coverage": {
+        "total_sentences": 1,
+        "checked_claims": 1,
+        "supported": 1,
+        "contradicted": 0,
+        "conflicting": 0,
+        "insufficient_evidence": 0,
+        "omitted": 0
+      },
+      "search": {
+        "status": "disabled",
+        "queries": [],
+        "provider": "Exa",
+        "message": "Web search is off; only supplied evidence is compared."
+      },
+      "warnings": [],
+      "word_count": 8,
+      "source_usage": {
+        "sources_found": 1,
+        "sources_compared": 1,
+        "passages_compared": 3,
+        "decisive_support_sources": 1,
+        "decisive_contradiction_sources": 0
+      },
+      "timings": {
+        "retrieval_ms": 0,
+        "enrichment_ms": 0,
+        "ranking_ms": 8,
+        "inference_ms": 102,
+        "model_loading_ms": 0,
+        "handler_total_ms": 110
+      },
+      "comparisons": 3,
+      "model": {
+        "name": "Fine-tuned MiniLM evidence NLI",
+        "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+        "max_tokens": 256
+      },
+      "latency_ms": 110,
+      "limitations": [
+        "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+        "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+        "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+      ]
+    },
+    "nasa_search": {
+      "assessment": "insufficient_evidence",
+      "label": "Model needs review",
+      "summary": "1 of 2 checked statements are supported; 0 contradicted; 1 unresolved.",
+      "claims": [
+        {
+          "id": "C1",
+          "text": "On April 19, 2021, NASA's Ingenuity helicopter completed the first powered, controlled flight on Mars.",
+          "verdict": "insufficient_evidence",
+          "label": "Evidence found; review required",
+          "review_reason": "model_uncertain",
+          "evidence_summary": {
+            "sources_found": 5,
+            "sources_compared": 3,
+            "passages_compared": 3,
+            "decisive_support_sources": 0,
+            "decisive_contradiction_sources": 0
+          },
+          "scores": {
+            "contradiction": 0.11501402046677026,
+            "entailment": 0.8021340342406028,
+            "neutral": 0.08285194529262692
+          },
+          "confidence": 0.8021340342406028,
+          "model_prediction": "entailment",
+          "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+          "reason": "Relevant passages were found, but the model could not confidently establish support or contradiction. This does not mean the claim is false.",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "passage": "NASA’s Ingenuity Mars Helicopter achieves powered, controlled flight for the first time on another planet, hovering for several seconds before touching back down on April 19, 2021.",
+              "relevance": 0.3882,
+              "scores": {
+                "contradiction": 0.11501402046677026,
+                "entailment": 0.8021340342406028,
+                "neutral": 0.08285194529262692
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "entailment",
+              "confidence": 0.8021340342406028,
+              "truncated": false,
+              "token_count": 63
+            },
+            {
+              "source_id": "S2",
+              "passage": "In this footage captured by the Mastcam-Z imager aboard the Perseverance Mars rover on April 19, 2021, the agency's Ingenuity Mars Helicopter lifts of from the Martian surface, hovers for 30 seconds, then touches back down. Lasting a total of 39.1 seconds, the flight marks the first instance of powered, controlled flight on another planet.",
+              "relevance": 0.2335,
+              "scores": {
+                "contradiction": 0.13649008879632024,
+                "entailment": 0.783946495138174,
+                "neutral": 0.07956341606550582
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "entailment",
+              "confidence": 0.783946495138174,
+              "truncated": false,
+              "token_count": 103
+            },
+            {
+              "source_id": "S1",
+              "passage": "Monday, NASA’s Ingenuity Mars Helicopter became the first aircraft in history to make a powered, controlled flight on another planet.",
+              "relevance": 0.2648,
+              "scores": {
+                "contradiction": 0.22487371002506942,
+                "entailment": 0.05908797915917942,
+                "neutral": 0.7160383108157511
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+              "raw_relation": "neutral",
+              "confidence": 0.7160383108157511,
+              "truncated": false,
+              "token_count": 55
+            }
+          ]
+        },
+        {
+          "id": "C2",
+          "text": "The flight lasted 39.1 seconds.",
+          "verdict": "supported",
+          "label": "Supported by this evidence",
+          "review_reason": null,
+          "evidence_summary": {
+            "sources_found": 5,
+            "sources_compared": 3,
+            "passages_compared": 3,
+            "decisive_support_sources": 2,
+            "decisive_contradiction_sources": 0
+          },
+          "scores": {
+            "contradiction": 0.01300661421436002,
+            "entailment": 0.9758423526416479,
+            "neutral": 0.0111510331439921
+          },
+          "confidence": 0.9758423526416479,
+          "model_prediction": "entailment",
+          "decision_reason": "The validation-selected threshold and margin are met.",
+          "reason": "A compared passage supports this statement above the validation-selected threshold.",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "passage": "Lasting a total of 39.1 seconds, the flight marks the first instance of powered, controlled flight on another planet.",
+              "relevance": 0.2927,
+              "scores": {
+                "contradiction": 0.01300661421436002,
+                "entailment": 0.9758423526416479,
+                "neutral": 0.0111510331439921
+              },
+              "relation": "entailment",
+              "decision": "decisive",
+              "decision_reason": "The validation-selected threshold and margin are met.",
+              "raw_relation": "entailment",
+              "confidence": 0.9758423526416479,
+              "truncated": false,
+              "token_count": 37
+            },
+            {
+              "source_id": "S1",
+              "passage": "It then descended, touching back down on the surface of Mars after logging a total of 39.1 seconds of flight.",
+              "relevance": 0.2991,
+              "scores": {
+                "contradiction": 0.015369032874030644,
+                "entailment": 0.9710137376296148,
+                "neutral": 0.013617229496354457
+              },
+              "relation": "entailment",
+              "decision": "decisive",
+              "decision_reason": "The validation-selected threshold and margin are met.",
+              "raw_relation": "entailment",
+              "confidence": 0.9710137376296148,
+              "truncated": false,
+              "token_count": 36
+            },
+            {
+              "source_id": "S3",
+              "passage": "The helicopter hovered for 30 seconds at its intended altitude of 10 feet (3 meters), and spent 39 seconds airborne, more than three times longer than the first successful flight of the Wright Flyer, which lasted a mere 12 seconds on Dec. 17, 1903.",
+              "relevance": 0.1421,
+              "scores": {
+                "contradiction": 0.1781257737336609,
+                "entailment": 0.720246355870721,
+                "neutral": 0.10162787039561808
+              },
+              "relation": "review",
+              "decision": "review",
+              "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+              "raw_relation": "entailment",
+              "confidence": 0.720246355870721,
+              "truncated": false,
+              "token_count": 65
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA’s Ingenuity Mars Helicopter Succeeds in Historic First Flight",
+          "url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+          "domain": "www.nasa.gov",
+          "published_at": "2021-04-19T15:22:00.000Z",
+          "retrieved_at": "2026-10-26T01:07:38.968853+00:00",
+          "kind": "web",
+          "enrichment_status": "full_text",
+          "original_requested_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+          "page_retrieved_at": "2026-10-26T01:07:56.112141+00:00",
+          "id": "S1",
+          "used_for_claims": [
+            "C1",
+            "C2"
+          ]
+        },
+        {
+          "title": "Perseverance's Mastcam-Z Video of Ingenuity's First Full Flight | NASA Jet Propulsion Laboratory (JPL)",
+          "url": "https://www.jpl.nasa.gov/images/pia24521-perseverances-mastcam-z-video-of-ingenuitys-first-full-flight/",
+          "domain": "www.jpl.nasa.gov",
+          "published_at": "2021-04-19T00:00:00.000Z",
+          "retrieved_at": "2026-10-26T01:07:38.968961+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://www.jpl.nasa.gov/images/pia24521-perseverances-mastcam-z-video-of-ingenuitys-first-full-flight/",
+          "id": "S2",
+          "used_for_claims": [
+            "C1",
+            "C2"
+          ]
+        },
+        {
+          "title": "NASA's Mars helicopter takes flight, 1st for another planet | AP News",
+          "url": "https://apnews.com/article/science-planets-mars-1f39e9b9c56ad3bbe3634aeabfa4abaf",
+          "domain": "apnews.com",
+          "published_at": "2021-04-19T20:20:21.000Z",
+          "retrieved_at": "2026-10-26T01:07:38.969046+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://apnews.com/article/science-planets-mars-1f39e9b9c56ad3bbe3634aeabfa4abaf",
+          "id": "S3",
+          "used_for_claims": [
+            "C2"
+          ]
+        },
+        {
+          "title": "Perseverance's Navcam View of Ingenuity's First Flight - NASA Science",
+          "url": "https://science.nasa.gov/resource/perseverances-navcam-view-of-ingenuitys-first-flight/",
+          "domain": "science.nasa.gov",
+          "published_at": "2021-04-19T04:00:00.000Z",
+          "retrieved_at": "2026-10-26T01:07:38.969109+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://science.nasa.gov/resource/perseverances-navcam-view-of-ingenuitys-first-flight/",
+          "id": "S4",
+          "used_for_claims": [
+            "C1"
+          ]
+        },
+        {
+          "title": "Mars Helicopter - NASA Mars",
+          "url": "https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf",
+          "domain": "science.nasa.gov",
+          "published_at": null,
+          "retrieved_at": "2026-10-26T01:07:38.969181+00:00",
+          "kind": "web",
+          "enrichment_status": "search_excerpt",
+          "original_requested_url": "https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf",
+          "id": "S5",
+          "used_for_claims": []
+        }
+      ],
+      "coverage": {
+        "total_sentences": 2,
+        "checked_claims": 2,
+        "supported": 1,
+        "contradicted": 0,
+        "conflicting": 0,
+        "insufficient_evidence": 1,
+        "omitted": 0
+      },
+      "search": {
+        "status": "ok",
+        "queries": [
+          "Reports and primary sources about: On April 19, 2021, NASA's Ingenuity helicopter completed the first powered, controlled flight on Mars. The flight lasted 39.1 seconds."
+        ],
+        "provider": "Exa",
+        "message": "Retrieved related sources; passages are checked separately for each statement.",
+        "queries_succeeded": 1,
+        "queries_failed": 0
+      },
+      "warnings": [
+        "Could not read the full page from www.jpl.nasa.gov; its search excerpt was retained."
+      ],
+      "word_count": 21,
+      "source_usage": {
+        "sources_found": 5,
+        "sources_compared": 4,
+        "passages_compared": 6,
+        "decisive_support_sources": 2,
+        "decisive_contradiction_sources": 0
+      },
+      "timings": {
+        "retrieval_ms": 0,
+        "enrichment_ms": 233,
+        "ranking_ms": 79,
+        "inference_ms": 343,
+        "model_loading_ms": 0,
+        "handler_total_ms": 655
+      },
+      "comparisons": 6,
+      "model": {
+        "name": "Fine-tuned MiniLM evidence NLI",
+        "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+        "max_tokens": 256
+      },
+      "latency_ms": 655,
+      "limitations": [
+        "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+        "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+        "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+      ]
+    }
+  },
+  "source_sha256": {
+    "app.py": "8b8c7a7396e28bcc4b21817dabc3741ae5b7d4f4a29b82bec8251c3b8a6b3796",
+    "evidence_pipeline.py": "e3f88fc36742da8678b6c2b50ca4fc9b7f03f2d3d6b7add58009475dba28627c",
+    "evidence_sources.py": "85ca3c051825d6d15510daeee8ef4ceed7296404481a5214b267e09d84fd28da",
+    "public/app.js": "46af05e12619789960292efe46e37c6ee9410111ba27f8a9dbd1afd92e7ab375"
+  },
+  "scope": "Deployment and retrieval behavior probes; not a model accuracy benchmark. Requests may reuse warm instances and cached search results. Model weights and thresholds unchanged.",
+  "hosting_config": {
+    "VERCEL_PYTHON_COMPILEALL": "0"
+  }
+}

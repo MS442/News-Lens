@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.vercel/
+.env*
+data/
+checkpoints/
+artifacts/*_predictions.jsonl
+.pytest_cache/
+
+
+.vercel
+.env*

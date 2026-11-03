@@ -1,0 +1,20 @@
+{
+  "deployment_id": "dpl_J6WC498PMbCVWGLAhQM4uZBcxwb2",
+  "url": "https://manan-dl-news-lens.vercel.app",
+  "deployment_url": "https://manan-dl-news-lens-f2zseoh3t-gamers21.vercel.app",
+  "model_sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+  "tests": {
+    "passed": 154,
+    "skipped": 1,
+    "skip_reason": "Optional legacy prepared-data audit; v2 artifact checks passed."
+  },
+  "live_parity": {
+    "cases": 12,
+    "max_score_difference": 0.0
+  },
+  "search_mode": "Exa public rate-limited MCP; no marketplace resource provisioned",
+  "verification_files": [
+    "evidence_production_verification.json",
+    "evidence_live_parity.json"
+  ]
+}

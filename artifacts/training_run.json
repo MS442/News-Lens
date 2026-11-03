@@ -1,0 +1,21 @@
+{
+  "checkpoint": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "seed": 42,
+  "best_epoch": 3,
+  "epochs_completed": 3,
+  "max_tokens": 256,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "gradient_clip_norm": 1.0,
+  "warmup_fraction": 0.06,
+  "scheduler": "linear decay",
+  "training_seconds": 1147.1688869,
+  "parameters": 66955010,
+  "trainable_parameters": 66955010,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.6.0+cu124"
+}

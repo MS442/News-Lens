@@ -1,0 +1,363 @@
+{
+  "model": "cross-encoder/nli-MiniLM2-L6-H768",
+  "revision": "b95119ce93d3e065de6214e38cd4a97b0f2f2c6d",
+  "split": "validation",
+  "protocol": "PyTorch GPU mixed precision before project fine-tuning; no temperature fitting",
+  "metrics": {
+    "accuracy": 0.6864973262032086,
+    "macro_precision": 0.6832891061531661,
+    "macro_recall": 0.6863432353327806,
+    "macro_f1": 0.6771832693813772,
+    "support": 2992,
+    "confusion_matrix": [
+      [
+        811,
+        67,
+        120
+      ],
+      [
+        62,
+        789,
+        147
+      ],
+      [
+        371,
+        171,
+        454
+      ]
+    ],
+    "matrix_labels": [
+      "contradiction",
+      "entailment",
+      "neutral"
+    ],
+    "per_class": [
+      {
+        "id": 0,
+        "label": "contradiction",
+        "precision": 0.6519292604501608,
+        "recall": 0.812625250501002,
+        "f1-score": 0.7234611953612846,
+        "support": 998.0
+      },
+      {
+        "id": 1,
+        "label": "entailment",
+        "precision": 0.7682570593963,
+        "recall": 0.7905811623246493,
+        "f1-score": 0.7792592592592592,
+        "support": 998.0
+      },
+      {
+        "id": 2,
+        "label": "neutral",
+        "precision": 0.6296809986130375,
+        "recall": 0.45582329317269077,
+        "f1-score": 0.5288293535235876,
+        "support": 996.0
+      }
+    ],
+    "nll": 1.0210069821903087,
+    "brier": 0.5027579799246235,
+    "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+    "ece": 0.20536186592902417
+  },
+  "loss": 1.0210063514862469,
+  "by_dataset": {
+    "ANLI-R1": {
+      "accuracy": 0.7466666666666667,
+      "macro_precision": 0.7638348952909869,
+      "macro_recall": 0.7466666666666667,
+      "macro_f1": 0.7453175259626872,
+      "support": 300,
+      "confusion_matrix": [
+        [
+          66,
+          11,
+          23
+        ],
+        [
+          9,
+          69,
+          22
+        ],
+        [
+          5,
+          6,
+          89
+        ]
+      ],
+      "matrix_labels": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ],
+      "per_class": [
+        {
+          "id": 0,
+          "label": "contradiction",
+          "precision": 0.825,
+          "recall": 0.66,
+          "f1-score": 0.7333333333333333,
+          "support": 100.0
+        },
+        {
+          "id": 1,
+          "label": "entailment",
+          "precision": 0.8023255813953488,
+          "recall": 0.69,
+          "f1-score": 0.7419354838709677,
+          "support": 100.0
+        },
+        {
+          "id": 2,
+          "label": "neutral",
+          "precision": 0.664179104477612,
+          "recall": 0.89,
+          "f1-score": 0.7606837606837606,
+          "support": 100.0
+        }
+      ],
+      "nll": 0.8118462219800168,
+      "brier": 0.39423549908764005,
+      "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+      "ece": 0.1459678503870964
+    },
+    "ANLI-R2": {
+      "accuracy": 0.7033333333333334,
+      "macro_precision": 0.7130001430001429,
+      "macro_recall": 0.7033333333333333,
+      "macro_f1": 0.6998952293764621,
+      "support": 300,
+      "confusion_matrix": [
+        [
+          71,
+          12,
+          17
+        ],
+        [
+          17,
+          57,
+          26
+        ],
+        [
+          12,
+          5,
+          83
+        ]
+      ],
+      "matrix_labels": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ],
+      "per_class": [
+        {
+          "id": 0,
+          "label": "contradiction",
+          "precision": 0.71,
+          "recall": 0.71,
+          "f1-score": 0.71,
+          "support": 100.0
+        },
+        {
+          "id": 1,
+          "label": "entailment",
+          "precision": 0.7702702702702703,
+          "recall": 0.57,
+          "f1-score": 0.6551724137931034,
+          "support": 100.0
+        },
+        {
+          "id": 2,
+          "label": "neutral",
+          "precision": 0.6587301587301587,
+          "recall": 0.83,
+          "f1-score": 0.7345132743362832,
+          "support": 100.0
+        }
+      ],
+      "nll": 0.9633202117337267,
+      "brier": 0.46372767302312184,
+      "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+      "ece": 0.1548222746451696
+    },
+    "ANLI-R3": {
+      "accuracy": 0.7266666666666667,
+      "macro_precision": 0.7507731279705262,
+      "macro_recall": 0.7266666666666667,
+      "macro_f1": 0.7270677737915267,
+      "support": 300,
+      "confusion_matrix": [
+        [
+          71,
+          8,
+          21
+        ],
+        [
+          7,
+          62,
+          31
+        ],
+        [
+          9,
+          6,
+          85
+        ]
+      ],
+      "matrix_labels": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ],
+      "per_class": [
+        {
+          "id": 0,
+          "label": "contradiction",
+          "precision": 0.8160919540229885,
+          "recall": 0.71,
+          "f1-score": 0.7593582887700535,
+          "support": 100.0
+        },
+        {
+          "id": 1,
+          "label": "entailment",
+          "precision": 0.8157894736842105,
+          "recall": 0.62,
+          "f1-score": 0.7045454545454546,
+          "support": 100.0
+        },
+        {
+          "id": 2,
+          "label": "neutral",
+          "precision": 0.6204379562043796,
+          "recall": 0.85,
+          "f1-score": 0.7172995780590717,
+          "support": 100.0
+        }
+      ],
+      "nll": 0.8094491456272932,
+      "brier": 0.42463050396072105,
+      "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+      "ece": 0.13219610114892325
+    },
+    "FEVER-NLI": {
+      "accuracy": 0.6821589205397302,
+      "macro_precision": 0.6882780452055445,
+      "macro_recall": 0.6821589205397302,
+      "macro_f1": 0.6423864110488773,
+      "support": 2001,
+      "confusion_matrix": [
+        [
+          596,
+          36,
+          35
+        ],
+        [
+          27,
+          597,
+          43
+        ],
+        [
+          341,
+          154,
+          172
+        ]
+      ],
+      "matrix_labels": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ],
+      "per_class": [
+        {
+          "id": 0,
+          "label": "contradiction",
+          "precision": 0.6182572614107884,
+          "recall": 0.8935532233883059,
+          "f1-score": 0.7308399754751687,
+          "support": 667.0
+        },
+        {
+          "id": 1,
+          "label": "entailment",
+          "precision": 0.758576874205845,
+          "recall": 0.8950524737631185,
+          "f1-score": 0.8211829436038515,
+          "support": 667.0
+        },
+        {
+          "id": 2,
+          "label": "neutral",
+          "precision": 0.688,
+          "recall": 0.25787106446776614,
+          "f1-score": 0.3751363140676118,
+          "support": 667.0
+        }
+      ],
+      "nll": 1.0626014127197934,
+      "brier": 0.5188735038538163,
+      "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+      "ece": 0.2250804403524051
+    },
+    "SciFact": {
+      "accuracy": 0.3956043956043956,
+      "macro_precision": 0.6254331254331253,
+      "macro_recall": 0.4056358917315535,
+      "macro_f1": 0.34406337998571007,
+      "support": 91,
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          24
+        ],
+        [
+          2,
+          4,
+          25
+        ],
+        [
+          4,
+          0,
+          25
+        ]
+      ],
+      "matrix_labels": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ],
+      "per_class": [
+        {
+          "id": 0,
+          "label": "contradiction",
+          "precision": 0.5384615384615384,
+          "recall": 0.22580645161290322,
+          "f1-score": 0.3181818181818182,
+          "support": 31.0
+        },
+        {
+          "id": 1,
+          "label": "entailment",
+          "precision": 1.0,
+          "recall": 0.12903225806451613,
+          "f1-score": 0.22857142857142856,
+          "support": 31.0
+        },
+        {
+          "id": 2,
+          "label": "neutral",
+          "precision": 0.33783783783783783,
+          "recall": 0.8620689655172413,
+          "f1-score": 0.4854368932038835,
+          "support": 29.0
+        }
+      ],
+      "nll": 1.683547143503147,
+      "brier": 0.8923944165004629,
+      "brier_definition": "Mean summed squared error across all three classes (range 0 to 2)",
+      "ece": 0.41109111446600693
+    }
+  }
+}

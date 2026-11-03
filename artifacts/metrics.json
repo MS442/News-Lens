@@ -1,0 +1,874 @@
+{
+  "generated_at": "2026-10-25T07:25:25.149530+00:00",
+  "status": "evaluated",
+  "model": {
+    "name": "Fine-tuned DistilBERT",
+    "architecture": "6 Transformer encoder layers + classification head",
+    "max_tokens": 256,
+    "parameters": 66955010,
+    "trainable_parameters": 66955010,
+    "checkpoint": "distilbert/distilbert-base-uncased",
+    "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+    "runtime": "ONNX Runtime · int8 weights · Python",
+    "quantization": "Dynamic MatMul/Gather, per-channel, reduce_range=True for portable x64 inference",
+    "sha256": "1f8e969417f72aff706d2f59de7b06729b29eddc57e7893eba8c81cfec6697b1"
+  },
+  "evaluation_protocol": {
+    "batch_size": 1,
+    "runtime": "ONNX Runtime CPU",
+    "intra_op_threads": 2,
+    "inter_op_threads": 1,
+    "note": "Each article is evaluated alone, matching the live prediction endpoint. Dynamic-int8 results can depend on batch composition."
+  },
+  "test": {
+    "accuracy": 0.9903373453127648,
+    "precision": 0.9943887775551102,
+    "recall": 0.9829635499207607,
+    "f1": 0.9886431560071728,
+    "macro_f1": 0.9901174180979956,
+    "roc_auc": 0.9994905206315666,
+    "pr_auc": 0.9993475649656904,
+    "support": 5899,
+    "confusion_matrix": [
+      [
+        3361,
+        14
+      ],
+      [
+        43,
+        2481
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "Reliable",
+        "precision": 0.9873678025851939,
+        "recall": 0.9958518518518519,
+        "f1-score": 0.9915916801888184,
+        "support": 3375.0
+      },
+      {
+        "label": "Misleading",
+        "precision": 0.9943887775551102,
+        "recall": 0.9829635499207607,
+        "f1-score": 0.9886431560071728,
+        "support": 2524.0
+      }
+    ],
+    "nll": 0.03730928551170835,
+    "brier": 0.00851271094099218,
+    "ece": 0.0014468036802931551,
+    "positive_class": "Misleading (1)",
+    "matrix_labels": [
+      "Reliable",
+      "Misleading"
+    ],
+    "mean_batch_latency_ms_per_article": 57.52441912188516,
+    "coverage": 0.995931513815901,
+    "selective_accuracy": 0.992,
+    "baseline": {
+      "accuracy": 0.9577894558399729,
+      "precision": 0.9530067702110713,
+      "recall": 0.9480982567353408,
+      "f1": 0.9505461767626614,
+      "macro_f1": 0.9568640982881768,
+      "roc_auc": 0.991439103128485,
+      "pr_auc": 0.9895064329443974,
+      "support": 5899,
+      "confusion_matrix": [
+        [
+          3257,
+          118
+        ],
+        [
+          131,
+          2393
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "Reliable",
+          "precision": 0.9613341204250295,
+          "recall": 0.965037037037037,
+          "f1-score": 0.9631820198136921,
+          "support": 3375.0
+        },
+        {
+          "label": "Misleading",
+          "precision": 0.9530067702110713,
+          "recall": 0.9480982567353408,
+          "f1-score": 0.9505461767626614,
+          "support": 2524.0
+        }
+      ],
+      "nll": 0.13797683935292793,
+      "brier": 0.03604127149963145,
+      "ece": 0.0451970692455965,
+      "positive_class": "Misleading (1)",
+      "matrix_labels": [
+        "Reliable",
+        "Misleading"
+      ]
+    },
+    "name": "WELFake held-out news articles"
+  },
+  "baseline": {
+    "name": "TF-IDF + logistic regression",
+    "accuracy": 0.9577894558399729,
+    "precision": 0.9530067702110713,
+    "recall": 0.9480982567353408,
+    "f1": 0.9505461767626614,
+    "macro_f1": 0.9568640982881768,
+    "roc_auc": 0.991439103128485,
+    "pr_auc": 0.9895064329443974,
+    "support": 5899,
+    "confusion_matrix": [
+      [
+        3257,
+        118
+      ],
+      [
+        131,
+        2393
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "Reliable",
+        "precision": 0.9613341204250295,
+        "recall": 0.965037037037037,
+        "f1-score": 0.9631820198136921,
+        "support": 3375.0
+      },
+      {
+        "label": "Misleading",
+        "precision": 0.9530067702110713,
+        "recall": 0.9480982567353408,
+        "f1-score": 0.9505461767626614,
+        "support": 2524.0
+      }
+    ],
+    "nll": 0.13797683935292793,
+    "brier": 0.03604127149963145,
+    "ece": 0.0451970692455965,
+    "positive_class": "Misleading (1)",
+    "matrix_labels": [
+      "Reliable",
+      "Misleading"
+    ]
+  },
+  "external": {
+    "accuracy": 0.5623441396508728,
+    "precision": 0.4826254826254826,
+    "recall": 0.3654970760233918,
+    "f1": 0.415973377703827,
+    "macro_f1": 0.5330116140762405,
+    "roc_auc": 0.551207729468599,
+    "pr_auc": 0.48111654347399363,
+    "support": 802,
+    "confusion_matrix": [
+      [
+        326,
+        134
+      ],
+      [
+        217,
+        125
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "Reliable",
+        "precision": 0.6003683241252302,
+        "recall": 0.7086956521739131,
+        "f1-score": 0.650049850448654,
+        "support": 460.0
+      },
+      {
+        "label": "Misleading",
+        "precision": 0.4826254826254826,
+        "recall": 0.3654970760233918,
+        "f1-score": 0.415973377703827,
+        "support": 342.0
+      }
+    ],
+    "nll": 1.3100855148489796,
+    "brier": 0.36289918120271264,
+    "ece": 0.33445547346462334,
+    "positive_class": "Misleading (1)",
+    "matrix_labels": [
+      "Reliable",
+      "Misleading"
+    ],
+    "mean_batch_latency_ms_per_article": 6.750517705736535,
+    "coverage": 0.827930174563591,
+    "selective_accuracy": 0.5813253012048193,
+    "baseline": {
+      "accuracy": 0.46508728179551123,
+      "precision": 0.42162162162162165,
+      "recall": 0.6842105263157895,
+      "f1": 0.5217391304347826,
+      "macro_f1": 0.45747494004058786,
+      "roc_auc": 0.5279366895499618,
+      "pr_auc": 0.473666339005413,
+      "support": 802,
+      "confusion_matrix": [
+        [
+          139,
+          321
+        ],
+        [
+          108,
+          234
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "Reliable",
+          "precision": 0.562753036437247,
+          "recall": 0.30217391304347824,
+          "f1-score": 0.3932107496463932,
+          "support": 460.0
+        },
+        {
+          "label": "Misleading",
+          "precision": 0.42162162162162165,
+          "recall": 0.6842105263157895,
+          "f1-score": 0.5217391304347826,
+          "support": 342.0
+        }
+      ],
+      "nll": 0.8083876849624684,
+      "brier": 0.2965633609696712,
+      "ece": 0.20545380368425967,
+      "positive_class": "Misleading (1)",
+      "matrix_labels": [
+        "Reliable",
+        "Misleading"
+      ]
+    },
+    "name": "LIAR external short political claims"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.12315484181783215,
+      "val_loss": 0.07759989333023437,
+      "val_f1": 0.9831299906419406,
+      "seconds": 373.4012700000003
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.02863792529624384,
+      "val_loss": 0.06842400914853479,
+      "val_f1": 0.9854092532558546,
+      "seconds": 389.55399490000036
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.008157014298625653,
+      "val_loss": 0.05757199060838273,
+      "val_f1": 0.9887292216932861,
+      "seconds": 382.9485851999998
+    }
+  ],
+  "calibration": {
+    "temperature": 1.9256927796992018,
+    "threshold": 0.8,
+    "fitted_on": "WELFake validation only",
+    "target_validation_accuracy": 0.95,
+    "coverage": 0.995931513815901,
+    "selective_accuracy": 0.992,
+    "before": {
+      "accuracy": 0.9883031022207154,
+      "precision": 0.993963782696177,
+      "recall": 0.9786053882725833,
+      "f1": 0.986224795368337,
+      "macro_f1": 0.9880306477946412,
+      "roc_auc": 0.9993400833480073,
+      "pr_auc": 0.9991950026920847,
+      "support": 5899,
+      "confusion_matrix": [
+        [
+          3360,
+          15
+        ],
+        [
+          54,
+          2470
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "Reliable",
+          "precision": 0.984182776801406,
+          "recall": 0.9955555555555555,
+          "f1-score": 0.9898365002209456,
+          "support": 3375.0
+        },
+        {
+          "label": "Misleading",
+          "precision": 0.993963782696177,
+          "recall": 0.9786053882725833,
+          "f1-score": 0.986224795368337,
+          "support": 2524.0
+        }
+      ],
+      "nll": 0.06406471339825855,
+      "brier": 0.010929583883135004,
+      "ece": 0.010401126731753581,
+      "positive_class": "Misleading (1)",
+      "matrix_labels": [
+        "Reliable",
+        "Misleading"
+      ]
+    },
+    "after": {
+      "accuracy": 0.9883031022207154,
+      "precision": 0.993963782696177,
+      "recall": 0.9786053882725833,
+      "f1": 0.986224795368337,
+      "macro_f1": 0.9880306477946412,
+      "roc_auc": 0.9993400246522275,
+      "pr_auc": 0.9991950019474312,
+      "support": 5899,
+      "confusion_matrix": [
+        [
+          3360,
+          15
+        ],
+        [
+          54,
+          2470
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "Reliable",
+          "precision": 0.984182776801406,
+          "recall": 0.9955555555555555,
+          "f1-score": 0.9898365002209456,
+          "support": 3375.0
+        },
+        {
+          "label": "Misleading",
+          "precision": 0.993963782696177,
+          "recall": 0.9786053882725833,
+          "f1-score": 0.986224795368337,
+          "support": 2524.0
+        }
+      ],
+      "nll": 0.041718191442152684,
+      "brier": 0.010072941956057709,
+      "ece": 0.003440907020087106,
+      "positive_class": "Misleading (1)",
+      "matrix_labels": [
+        "Reliable",
+        "Misleading"
+      ]
+    },
+    "warning": "Calibration on this dataset does not make scores probabilities of factual truth, especially on new topics or sources.",
+    "validation_coverage": 0.9937277504661807,
+    "validation_selective_accuracy": 0.9901057659501876,
+    "target_met": true
+  },
+  "concepts": [
+    {
+      "name": "Subword tokenization",
+      "explanation": "The pretrained WordPiece tokenizer turns natural text into token IDs. Negations are preserved."
+    },
+    {
+      "name": "Embeddings and positions",
+      "explanation": "Learned token and position vectors represent text and its order."
+    },
+    {
+      "name": "Multi-head self-attention",
+      "explanation": "Queries, keys and values combine contextual information across tokens in six encoder layers."
+    },
+    {
+      "name": "Feedforward networks",
+      "explanation": "Dense layers and GELU activations transform each token representation; a classifier predicts two dataset labels."
+    },
+    {
+      "name": "Residuals and layer normalization",
+      "explanation": "Residual connections and normalization support stable information flow through the Transformer."
+    },
+    {
+      "name": "Transfer learning",
+      "explanation": "All DistilBERT weights are fine-tuned from a pretrained language checkpoint. We did not pretrain or distil the original model."
+    },
+    {
+      "name": "Cross-entropy and backpropagation",
+      "explanation": "Training labels define a cross-entropy loss; gradients update the network to reduce that loss."
+    },
+    {
+      "name": "AdamW and learning-rate scheduling",
+      "explanation": "AdamW, weight decay, warmup, linear learning-rate decay and gradient clipping control training updates."
+    },
+    {
+      "name": "Dropout and early stopping",
+      "explanation": "Dropout regularizes the model. The best validation macro-F1 checkpoint is selected before test evaluation."
+    },
+    {
+      "name": "Temperature scaling",
+      "explanation": "One temperature fitted on validation adjusts model scores. It does not verify real-world facts."
+    },
+    {
+      "name": "Baseline comparison",
+      "explanation": "TF-IDF with logistic regression checks whether the Transformer improves over a simpler text model."
+    },
+    {
+      "name": "Generalization",
+      "explanation": "LIAR short claims are evaluated separately to reveal errors when input differs from training news articles."
+    }
+  ],
+  "datasets": {
+    "schema_version": 1,
+    "created_at": "2026-10-25T06:20:49.303200+00:00",
+    "seed": 42,
+    "labels": {
+      "0": "real",
+      "1": "fake"
+    },
+    "sources": [
+      {
+        "name": "WELFake",
+        "url": "https://zenodo.org/records/4561253",
+        "download_url": "https://zenodo.org/api/records/4561253/files/WELFake_Dataset.csv/content",
+        "citation": "Verma, Agrawal and Prodan (2021), WELFake; DOI:10.5281/zenodo.4561253",
+        "license": "CC-BY-4.0 (verified via Zenodo record API)",
+        "sha256": "665331424230fc452e9482c3547a6a199a2c29745ade8d236950d1d105223773",
+        "md5": "73c9675a4b3d09f86a6933d0b8d7d908",
+        "bytes": 245086152
+      },
+      {
+        "name": "LIAR",
+        "url": "https://aclanthology.org/P17-2067/",
+        "download_url": "https://sites.cs.ucsb.edu/~william/data/liar_dataset.zip",
+        "used_download_url": "https://raw.githubusercontent.com/ekagra-ranjan/fake-news-detection-LIAR-pytorch/ec150138ab79bf194b59986383fedced799a4767/liar_dataset.zip",
+        "download_note": "Original UCSB HTTPS host had an expired certificate during preparation. Used a commit-pinned archive mirror without bypassing TLS verification; test.tsv independently cross-checked byte-for-byte against another mirror.",
+        "citation": "William Yang Wang (2017), Liar, Liar Pants on Fire; DOI:10.18653/v1/P17-2067",
+        "license": "Original README permits research use only and says original sources retain copyright. Raw data is not packaged for redistribution.",
+        "sha256": "611c1addad919743dde15822b87a60bfb760d8f85597f25289e34621800654c7",
+        "bytes": 1013571
+      }
+    ],
+    "split_strategy": "WELFake: normalize and group exact title+body text, exact body independent of headline, exact titles of at least six words, identical first 80 words, and approximate near duplicates (64-permutation MinHash, 16 bands; verified 3-word-shingle Jaccard>=0.85 on first512words). Drop contradictory groups and retain one longest representative per group. Stratified seeded 80/10/10 split of unique groups. LIAR original test four-label subset is external-only.",
+    "cleaning": "HTML/URLs/whitespace normalization; remove leading publisher datelines, simple bylines, reporting/editing tails and selected publisher title suffixes. Preserve negation, case, numbers and natural wording. Minimum50bodywords for WELFake.",
+    "limitations": [
+      "Approximate grouping cannot guarantee every paraphrase or same-event article is caught.",
+      "WELFake combines older datasets; random content-group holdout is not a publisher-held-out or contemporary-news test.",
+      "Source writing style and topic can still predict dataset labels after explicit dateline removal.",
+      "LIAR short political claims differ substantially from full news articles; external metrics must be shown separately.",
+      "External overlap filtering checks exact whole texts only; LIAR claims could still be quoted or paraphrased inside older news articles or have appeared during encoder pretraining.",
+      "Dataset labels and model scores are not independent real-time fact verification."
+    ],
+    "welfake_audit": {
+      "raw_records": 72134,
+      "raw_label_counts": {
+        "1": 37106,
+        "0": 35028
+      },
+      "usable_unique_groups": 58988,
+      "exclusions": {
+        "body_shorter_than_50_words": 4081,
+        "duplicate_group_extra_records": 9044,
+        "conflicting_group_records": 21,
+        "conflicting_groups": 8
+      },
+      "near_duplicate_candidates_checked": 6750,
+      "near_duplicate_edges": 321,
+      "group_size_distribution": {
+        "1": 51328,
+        "2": 6807,
+        "3": 664,
+        "4": 115,
+        "5": 31,
+        "6": 15,
+        "7": 13,
+        "8": 6,
+        "9": 5,
+        "10": 2,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "17": 1,
+        "18": 1,
+        "20": 1,
+        "37": 1,
+        "55": 1
+      },
+      "label_audit": {
+        "canonical_labels": {
+          "0": "dataset-labelled real",
+          "1": "dataset-labelled fake"
+        },
+        "raw_to_canonical": {
+          "0": 0,
+          "1": 1
+        },
+        "publisher_prose_conflict": "Zenodo prose incorrectly says 0=fake,1=real. Its checksum-verified CSV has 35,028 label-0 rows and 37,106 label-1 rows, matching the publisher's real/fake totals in the opposite order. Raw Reuters-dateline examples corroborate this mapping.",
+        "reuters_dateline_raw_label_counts": {
+          "0": 21247,
+          "1": 4
+        },
+        "examples": {
+          "0": [
+            {
+              "id": "11",
+              "title": "May Brexit offer would hurt, cost EU citizens - EU parliament",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "12",
+              "title": "Schumer calls on Trump to appoint official to oversee Puerto Rico relief",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "15",
+              "title": "Billionaire Odebrecht in Brazil scandal released to house arrest",
+              "starts_with_reuters_dateline": true
+            }
+          ],
+          "1": [
+            {
+              "id": "33066",
+              "title": "VOTING MACHINES STOLEN In Controversial GA Election Where Dems Hope To Embarrass Trump With 30-Yr Old Jon Ossoff Win",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "44572",
+              "title": "BRILLIANT NEWT GINGRICH: Here’s Why Trump Should NOT Trust Intel Community Right Now [Video]",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "58087",
+              "title": "EU states agree caps on wholesale roaming charges",
+              "starts_with_reuters_dateline": true
+            }
+          ]
+        }
+      }
+    },
+    "liar_audit": {
+      "original_test_label_counts": {
+        "true": 211,
+        "false": 250,
+        "half-true": 267,
+        "pants-fire": 92,
+        "barely-true": 214,
+        "mostly-true": 249
+      },
+      "mapping": {
+        "true": 0,
+        "mostly-true": 0,
+        "false": 1,
+        "pants-fire": 1
+      },
+      "exclusions": {
+        "excluded_half-true": 267,
+        "excluded_barely-true": 214
+      },
+      "records": 802,
+      "scope": "Original LIAR test split only. Four-label subset: mostly-true is collapsed with true; half-true and barely-true are excluded. Never used for training, checkpoint selection, thresholds, or calibration.",
+      "license": "Original README permits research use only and says original sources retain copyright. Raw data is not packaged for redistribution.",
+      "test_tsv_sha256": "ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f",
+      "mirror_validation": "Archive test.tsv is byte-identical to independently downloaded tfs4/liar_dataset/master/test.tsv.",
+      "readme_sha256": "b995fd7caf6794b32fe934e7bbde115bacf7d376a407602595b4cab45f921b64"
+    },
+    "splits": {
+      "train": {
+        "path": "train.jsonl",
+        "records": 47190,
+        "class_counts": {
+          "1": 20192,
+          "0": 26998
+        },
+        "sha256": "4b578230fc4e0b251e46083097a01dc737bcaa07ad57c0581d5bf95bdc84e523",
+        "bytes": 179478147
+      },
+      "val": {
+        "path": "val.jsonl",
+        "records": 5899,
+        "class_counts": {
+          "1": 2524,
+          "0": 3375
+        },
+        "sha256": "1396f24a78bf24d3f9680f976d90bb9c2e5e77bb8fe5900153fd17e9b82a896c",
+        "bytes": 22282906
+      },
+      "test": {
+        "path": "test.jsonl",
+        "records": 5899,
+        "class_counts": {
+          "0": 3375,
+          "1": 2524
+        },
+        "sha256": "ff1310e641aaf8eb14e7203b42acd87ca26481cab925a545b87e5c0f99c4d2e4",
+        "bytes": 22944552
+      },
+      "external": {
+        "path": "external.jsonl",
+        "records": 802,
+        "class_counts": {
+          "0": 460,
+          "1": 342
+        },
+        "sha256": "ee15d3a692759ddfdaf54f5d2ed59da5f8f0aeff2852e7574a7b3bdda65bc0c0",
+        "bytes": 191552
+      }
+    },
+    "checks": {
+      "cross_split_group_overlap": 0,
+      "cross_split_exact_body_overlap": 0,
+      "welfake_publisher_md5_verified": true,
+      "independently_recomputed_body_hashes": 58988,
+      "exact_body_duplicates_in_all_prepared_welfake": 0,
+      "all_split_file_hashes_verified": true,
+      "liar_tsv_quote_handling": "QUOTE_NONE; 1,283 original rows, 802 four-label rows"
+    }
+  },
+  "data_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-10-25T06:20:49.303200+00:00",
+    "seed": 42,
+    "labels": {
+      "0": "real",
+      "1": "fake"
+    },
+    "sources": [
+      {
+        "name": "WELFake",
+        "url": "https://zenodo.org/records/4561253",
+        "download_url": "https://zenodo.org/api/records/4561253/files/WELFake_Dataset.csv/content",
+        "citation": "Verma, Agrawal and Prodan (2021), WELFake; DOI:10.5281/zenodo.4561253",
+        "license": "CC-BY-4.0 (verified via Zenodo record API)",
+        "sha256": "665331424230fc452e9482c3547a6a199a2c29745ade8d236950d1d105223773",
+        "md5": "73c9675a4b3d09f86a6933d0b8d7d908",
+        "bytes": 245086152
+      },
+      {
+        "name": "LIAR",
+        "url": "https://aclanthology.org/P17-2067/",
+        "download_url": "https://sites.cs.ucsb.edu/~william/data/liar_dataset.zip",
+        "used_download_url": "https://raw.githubusercontent.com/ekagra-ranjan/fake-news-detection-LIAR-pytorch/ec150138ab79bf194b59986383fedced799a4767/liar_dataset.zip",
+        "download_note": "Original UCSB HTTPS host had an expired certificate during preparation. Used a commit-pinned archive mirror without bypassing TLS verification; test.tsv independently cross-checked byte-for-byte against another mirror.",
+        "citation": "William Yang Wang (2017), Liar, Liar Pants on Fire; DOI:10.18653/v1/P17-2067",
+        "license": "Original README permits research use only and says original sources retain copyright. Raw data is not packaged for redistribution.",
+        "sha256": "611c1addad919743dde15822b87a60bfb760d8f85597f25289e34621800654c7",
+        "bytes": 1013571
+      }
+    ],
+    "split_strategy": "WELFake: normalize and group exact title+body text, exact body independent of headline, exact titles of at least six words, identical first 80 words, and approximate near duplicates (64-permutation MinHash, 16 bands; verified 3-word-shingle Jaccard>=0.85 on first512words). Drop contradictory groups and retain one longest representative per group. Stratified seeded 80/10/10 split of unique groups. LIAR original test four-label subset is external-only.",
+    "cleaning": "HTML/URLs/whitespace normalization; remove leading publisher datelines, simple bylines, reporting/editing tails and selected publisher title suffixes. Preserve negation, case, numbers and natural wording. Minimum50bodywords for WELFake.",
+    "limitations": [
+      "Approximate grouping cannot guarantee every paraphrase or same-event article is caught.",
+      "WELFake combines older datasets; random content-group holdout is not a publisher-held-out or contemporary-news test.",
+      "Source writing style and topic can still predict dataset labels after explicit dateline removal.",
+      "LIAR short political claims differ substantially from full news articles; external metrics must be shown separately.",
+      "External overlap filtering checks exact whole texts only; LIAR claims could still be quoted or paraphrased inside older news articles or have appeared during encoder pretraining.",
+      "Dataset labels and model scores are not independent real-time fact verification."
+    ],
+    "welfake_audit": {
+      "raw_records": 72134,
+      "raw_label_counts": {
+        "1": 37106,
+        "0": 35028
+      },
+      "usable_unique_groups": 58988,
+      "exclusions": {
+        "body_shorter_than_50_words": 4081,
+        "duplicate_group_extra_records": 9044,
+        "conflicting_group_records": 21,
+        "conflicting_groups": 8
+      },
+      "near_duplicate_candidates_checked": 6750,
+      "near_duplicate_edges": 321,
+      "group_size_distribution": {
+        "1": 51328,
+        "2": 6807,
+        "3": 664,
+        "4": 115,
+        "5": 31,
+        "6": 15,
+        "7": 13,
+        "8": 6,
+        "9": 5,
+        "10": 2,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "17": 1,
+        "18": 1,
+        "20": 1,
+        "37": 1,
+        "55": 1
+      },
+      "label_audit": {
+        "canonical_labels": {
+          "0": "dataset-labelled real",
+          "1": "dataset-labelled fake"
+        },
+        "raw_to_canonical": {
+          "0": 0,
+          "1": 1
+        },
+        "publisher_prose_conflict": "Zenodo prose incorrectly says 0=fake,1=real. Its checksum-verified CSV has 35,028 label-0 rows and 37,106 label-1 rows, matching the publisher's real/fake totals in the opposite order. Raw Reuters-dateline examples corroborate this mapping.",
+        "reuters_dateline_raw_label_counts": {
+          "0": 21247,
+          "1": 4
+        },
+        "examples": {
+          "0": [
+            {
+              "id": "11",
+              "title": "May Brexit offer would hurt, cost EU citizens - EU parliament",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "12",
+              "title": "Schumer calls on Trump to appoint official to oversee Puerto Rico relief",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "15",
+              "title": "Billionaire Odebrecht in Brazil scandal released to house arrest",
+              "starts_with_reuters_dateline": true
+            }
+          ],
+          "1": [
+            {
+              "id": "33066",
+              "title": "VOTING MACHINES STOLEN In Controversial GA Election Where Dems Hope To Embarrass Trump With 30-Yr Old Jon Ossoff Win",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "44572",
+              "title": "BRILLIANT NEWT GINGRICH: Here’s Why Trump Should NOT Trust Intel Community Right Now [Video]",
+              "starts_with_reuters_dateline": true
+            },
+            {
+              "id": "58087",
+              "title": "EU states agree caps on wholesale roaming charges",
+              "starts_with_reuters_dateline": true
+            }
+          ]
+        }
+      }
+    },
+    "liar_audit": {
+      "original_test_label_counts": {
+        "true": 211,
+        "false": 250,
+        "half-true": 267,
+        "pants-fire": 92,
+        "barely-true": 214,
+        "mostly-true": 249
+      },
+      "mapping": {
+        "true": 0,
+        "mostly-true": 0,
+        "false": 1,
+        "pants-fire": 1
+      },
+      "exclusions": {
+        "excluded_half-true": 267,
+        "excluded_barely-true": 214
+      },
+      "records": 802,
+      "scope": "Original LIAR test split only. Four-label subset: mostly-true is collapsed with true; half-true and barely-true are excluded. Never used for training, checkpoint selection, thresholds, or calibration.",
+      "license": "Original README permits research use only and says original sources retain copyright. Raw data is not packaged for redistribution.",
+      "test_tsv_sha256": "ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f",
+      "mirror_validation": "Archive test.tsv is byte-identical to independently downloaded tfs4/liar_dataset/master/test.tsv.",
+      "readme_sha256": "b995fd7caf6794b32fe934e7bbde115bacf7d376a407602595b4cab45f921b64"
+    },
+    "splits": {
+      "train": {
+        "path": "train.jsonl",
+        "records": 47190,
+        "class_counts": {
+          "1": 20192,
+          "0": 26998
+        },
+        "sha256": "4b578230fc4e0b251e46083097a01dc737bcaa07ad57c0581d5bf95bdc84e523",
+        "bytes": 179478147
+      },
+      "val": {
+        "path": "val.jsonl",
+        "records": 5899,
+        "class_counts": {
+          "1": 2524,
+          "0": 3375
+        },
+        "sha256": "1396f24a78bf24d3f9680f976d90bb9c2e5e77bb8fe5900153fd17e9b82a896c",
+        "bytes": 22282906
+      },
+      "test": {
+        "path": "test.jsonl",
+        "records": 5899,
+        "class_counts": {
+          "0": 3375,
+          "1": 2524
+        },
+        "sha256": "ff1310e641aaf8eb14e7203b42acd87ca26481cab925a545b87e5c0f99c4d2e4",
+        "bytes": 22944552
+      },
+      "external": {
+        "path": "external.jsonl",
+        "records": 802,
+        "class_counts": {
+          "0": 460,
+          "1": 342
+        },
+        "sha256": "ee15d3a692759ddfdaf54f5d2ed59da5f8f0aeff2852e7574a7b3bdda65bc0c0",
+        "bytes": 191552
+      }
+    },
+    "checks": {
+      "cross_split_group_overlap": 0,
+      "cross_split_exact_body_overlap": 0,
+      "welfake_publisher_md5_verified": true,
+      "independently_recomputed_body_hashes": 58988,
+      "exact_body_duplicates_in_all_prepared_welfake": 0,
+      "all_split_file_hashes_verified": true,
+      "liar_tsv_quote_handling": "QUOTE_NONE; 1,283 original rows, 802 four-label rows"
+    }
+  },
+  "training": {
+    "checkpoint": "distilbert/distilbert-base-uncased",
+    "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+    "seed": 42,
+    "best_epoch": 3,
+    "epochs_completed": 3,
+    "max_tokens": 256,
+    "batch_size": 16,
+    "learning_rate": 2e-05,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "warmup_fraction": 0.06,
+    "scheduler": "linear decay",
+    "training_seconds": 1147.1688869,
+    "parameters": 66955010,
+    "trainable_parameters": 66955010,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.6.0+cu124"
+  },
+  "export_verification": {
+    "samples": 256,
+    "label_agreement": 0.99609375,
+    "max_score_difference": 0.6523398160934448
+  },
+  "limitations": [
+    "Text classification is not live fact verification. No web sources are checked for a prediction.",
+    "The TF-IDF baseline sees the full input text while the Transformer uses its first token window; this context-budget difference is disclosed rather than treated as a controlled architecture-only comparison.",
+    "Training articles are historical English news, with substantial political and publisher bias. Modern and unfamiliar topics may fail.",
+    "Only the first input token window is classified; long articles are visibly marked as truncated.",
+    "The independent LIAR test uses short political claims and a documented binary subset; it is not the standard six-class LIAR benchmark.",
+    "Removing duplicate articles and some publisher cues does not eliminate all dataset shortcuts or near-duplicates.",
+    "The classifier can be confidently wrong. High scores and highlighted text are not evidence that a claim is true or false."
+  ]
+}

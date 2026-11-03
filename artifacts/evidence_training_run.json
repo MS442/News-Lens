@@ -1,0 +1,45 @@
+{
+  "checkpoint": "cross-encoder/nli-MiniLM2-L6-H768",
+  "revision": "b95119ce93d3e065de6214e38cd4a97b0f2f2c6d",
+  "seed": 42,
+  "best_epoch": 2,
+  "epochs_completed": 2,
+  "checkpoint_selection": "Highest pooled validation macro-F1; no test selection",
+  "max_tokens": 256,
+  "pair_order": [
+    "evidence/premise",
+    "claim/hypothesis"
+  ],
+  "truncation": "longest_first",
+  "batch_size": 16,
+  "learning_rate": 1e-05,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "warmup_fraction": 0.06,
+  "gradient_clip_norm": 1.0,
+  "scheduler": "linear decay",
+  "training_seconds": 1115.1995079999979,
+  "parameters": 82120707,
+  "trainable_parameters": 82120707,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.6.0+cu124",
+  "data_manifest_sha256": "d3bd923b9e202cb00172b31b22e6ab09e38caf1ccc94216ca706d9d25121c53f",
+  "prepared_sha256": {
+    "train": "d3c571b0958fd8c059874e2d3b0e7c621c0df1c1d72e4753785b166372b99344",
+    "val": "ce8d41d66ab015afd6371ebcdcb416a281200afc895f62240c0320489fb86b6d",
+    "test": "af10cd58bddac0a6efcfc6a8aa52f65f67b23de2a538bf1c44869573511ba6a3",
+    "external_anli": "435cb00485e14c3bab5e4e9b2d4b6b5698e254fa7a2a6cd469eeb8cd83ec2887",
+    "external_fever": "becaf2448fd7eea0a4ca5bfab3b2cb137c3bcef5f86888a1e3aa416fc0292de4",
+    "external_scifact": "d92a98f00a1d3510c519248f0e7169b7c4df2e529c515020932385219708458f"
+  },
+  "training_dataset_counts": {
+    "FEVER-NLI": 60000,
+    "ANLI-R2": 9999,
+    "ANLI-R3": 9999,
+    "ANLI-R1": 9999,
+    "SciFact": 742
+  },
+  "pretrained_validation_macro_f1": 0.6771832693813772,
+  "base_training_disclosure": "The public base checkpoint already learned SNLI and MultiNLI. This project fine-tunes it; it does not pretrain or distil MiniLM from scratch."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Held-out reliable example",
+    "text": "Pelosi calls for outside commission to probe Russian meddling in U.S. election\n\nTop House Democrat Nancy Pelosi called on Thursday for the creation of an outside, independent commission to investigate what she said was “cold, hard evidence” that President Donald Trump’s family intended to collude with Russians to influence the election. “This week we saw cold hard evidence of the Trump campaign, indeed the Trump family, eagerly intending to collude, possibly, with Russia, a hostile foreign power, to influence American elections,” Pelosi said, referring to emails released this week by Trump’s son, Donald Trump Jr.",
+    "expected_label": "Reliable",
+    "dataset": "WELFake test",
+    "id": "welfake-11978"
+  },
+  {
+    "title": "Held-out misleading example",
+    "text": "Internet Heroes Make Trump-Putin Facebook Friendship Anniversary Video; It’s BRILLIANT (VIDEO)\n\nThe internet is full of hidden gems, and this hostile political environment and corrupt Trump administration has given us some of the most hilarious, powerful memes and videos we ve seen in a while. The latest masterpiece to grace the internet was inspired by the friendship anniversary videos we ve been seeing on everyone s Facebook feed the ones that celebrates close friendships with a highlight reel of all the time you ve spent connecting on Facebook.Well, two geniuses filmmakers Evan and Adam Nix have given us something truly amazing with a new friendship anniversary video of Donald Trump and Vladimir Putin. Poking fun at their disturbingly close and suspicious relationship, the Nix brothers got super creative and took a lighthearted approach to a concerning issue that most of America is extremely worried about. This video was released right as Trump is facing new criticism for his praise and defense of Russia, and his relationship with Putin and Russia has been called the biggest scandal in recent months.The Nix Bros. hilariously start the friendship anniversary out by stating A few months ago today you rigged the election together The video goes through several pinnacle points of Trump and Putin s weird connection, even once striking a sentimental tone in their friendship: And while there are several dictatorships, there s only one like yours ;) That s terrifying! At the very end, the video closes with a statement almost every American even conservatives know to be true: We are all totally fucked. You can watch the film below: The short film is absolutely genius, and worth every second. The Nix Bros. are known for their funny political videos, and we re so happy they weighed in on Trump and Putin with their satirical brand of comedy. At a time when the chaotic Trump administration is undoing everything America has worked to become, we all need a good laugh every now and then.Featured image is a screenshot",
+    "expected_label": "Misleading",
+    "dataset": "WELFake test",
+    "id": "welfake-60789"
+  }
+]

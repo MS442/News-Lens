@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "rewrites": [
+    {
+      "source": "/static/:path*",
+      "destination": "/:path*"
+    }
+  ],
+  "functions": {
+    "app.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{data/**,checkpoints/**,training/**,tests/**,__pycache__/**,artifacts/*_predictions.jsonl,requirements-training.txt,*.md,.env*,models/model.onnx,models/baseline.joblib,news_model.py,legacy_app.py,preprocessing.py}"
+    }
+  }
+}

@@ -1,0 +1,1930 @@
+{
+  "base": "https://manan-dl-news-lens.vercel.app",
+  "checked_at": 1792940367.8019276,
+  "checks": [
+    {
+      "name": "ready/self-test",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "model_loaded": true,
+        "runtime_self_test": "passed",
+        "inference": "Python ONNX Runtime",
+        "external_classification_api": false,
+        "external_search": "Exa",
+        "model_sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+        "version": "2.0.0"
+      }
+    },
+    {
+      "name": "asset /",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "bytes": 14101
+      }
+    },
+    {
+      "name": "asset /static/app.js",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "bytes": 46598
+      }
+    },
+    {
+      "name": "asset /static/styles.css",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "bytes": 34163
+      }
+    },
+    {
+      "name": "model/evaluation identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metrics download matches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject invalid input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject invalid input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject invalid input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Support example response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Support example no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Contradiction example response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Contradiction example no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no evidence is not false response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no evidence is not false no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty sources unresolved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "user NASA regression response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "user NASA regression no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CERN true event response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CERN true event no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CERN altered false claim response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CERN altered false claim no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Chandrayaan-3 true event response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Chandrayaan-3 true event no truth probabilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NLI scores normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "citation source exists",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "cases": [
+    {
+      "name": "Support example",
+      "http_status": 200,
+      "seconds": 0.61,
+      "request": {
+        "text": "The Jackson family included American singers and songwriters.",
+        "evidence_text": "Jackson family . As a group , the eldest sons Jackie , Tito , Jermaine , Marlon , Randy and Michael , made the family 's reputation , facilitating the subsequent success of siblings Rebbie , La Toya , and Janet . Janet Damita Jo Jackson ( born May 16 , 1966 ) is an American singer , songwriter , dancer and actress . Michael Joseph Jackson ( August 29 , 1958 -- June 25 , 2009 ) was an American singer , songwriter , record producer , dancer , actor , and philanthropist .",
+        "search_web": false
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "Model needs review",
+        "summary": "0 of 1 checked statements are supported; 0 contradicted; 1 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "The Jackson family included American singers and songwriters.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.005272400287400234,
+              "entailment": 0.8902683359046948,
+              "neutral": 0.1044592638079049
+            },
+            "confidence": 0.8902683359046948,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.1081,
+                "scores": {
+                  "contradiction": 0.005272400287400234,
+                  "entailment": 0.8902683359046948,
+                  "neutral": 0.1044592638079049
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8902683359046948,
+                "truncated": false,
+                "token_count": 121,
+                "passage_sha256": "88ec0d8ca1788d0c5468a96fb707c10a903261f207dce142e16b5b2751dec6a5",
+                "passage_word_count": 95
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": null,
+            "domain": "Supplied text",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:36.214485+00:00",
+            "kind": "supplied",
+            "id": "S1"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 1,
+          "checked_claims": 1,
+          "supported": 0,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 1,
+          "omitted": 0
+        },
+        "search": {
+          "status": "disabled",
+          "queries": [],
+          "provider": "Exa",
+          "message": "Web search is off; only supplied evidence is compared."
+        },
+        "warnings": [],
+        "word_count": 8,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 283,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "Contradiction example",
+      "http_status": 200,
+      "seconds": 0.843,
+      "request": {
+        "text": "George H. W. Bush retired from all politics in 1980.",
+        "evidence_text": "George H. W. Bush . Bush ran for president in 1980 but was defeated in the Republican primary by Ronald Reagan . Domestically , Bush reneged on a 1988 campaign promise and , after a struggle with Congress , signed an increase in taxes that Congress had passed .",
+        "search_web": false
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "Model needs review",
+        "summary": "0 of 1 checked statements are supported; 0 contradicted; 1 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "George H. W. Bush retired from all politics in 1980.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.8524439294182966,
+              "entailment": 0.013681033603321575,
+              "neutral": 0.13387503697838174
+            },
+            "confidence": 0.8524439294182966,
+            "model_prediction": "contradiction",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.3349,
+                "scores": {
+                  "contradiction": 0.8524439294182966,
+                  "entailment": 0.013681033603321575,
+                  "neutral": 0.13387503697838174
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "contradiction",
+                "confidence": 0.8524439294182966,
+                "truncated": false,
+                "token_count": 41,
+                "passage_sha256": "fe5e592f9558a937a7446c85554e6fa4118164b18711bfe30009f30149f92453",
+                "passage_word_count": 22
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.2204,
+                "scores": {
+                  "contradiction": 0.5921073839101467,
+                  "entailment": 0.017844683403347477,
+                  "neutral": 0.3900479326865058
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "contradiction",
+                "confidence": 0.5921073839101467,
+                "truncated": false,
+                "token_count": 72,
+                "passage_sha256": "7afda78cc3898742c80c56e9a78cc33a24cfc8f53347741c83ff3b28d2a09250",
+                "passage_word_count": 49
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.5628,
+                "scores": {
+                  "contradiction": 0.42405861188144256,
+                  "entailment": 0.011102373339156828,
+                  "neutral": 0.5648390147794007
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5648390147794007,
+                "truncated": false,
+                "token_count": 24,
+                "passage_sha256": "c1445ba1fc12abcedacad68b74c90151232a310c113c9ecacb2ca883590039fe",
+                "passage_word_count": 5
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": null,
+            "domain": "Supplied text",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:36.814282+00:00",
+            "kind": "supplied",
+            "id": "S1"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 1,
+          "checked_claims": 1,
+          "supported": 0,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 1,
+          "omitted": 0
+        },
+        "search": {
+          "status": "disabled",
+          "queries": [],
+          "provider": "Exa",
+          "message": "Web search is off; only supplied evidence is compared."
+        },
+        "warnings": [],
+        "word_count": 10,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 540,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "no evidence is not false",
+      "http_status": 200,
+      "seconds": 0.297,
+      "request": {
+        "text": "The committee approved a new library project on Tuesday.",
+        "search_web": false
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "More evidence needed",
+        "summary": "0 of 1 checked statements are supported; 0 contradicted; 1 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "The committee approved a new library project on Tuesday.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": null,
+            "confidence": null,
+            "model_prediction": null,
+            "decision_reason": "No relevant source passage was found.",
+            "reason": "No relevant source passage was found.",
+            "evidence": []
+          }
+        ],
+        "sources": [],
+        "coverage": {
+          "total_sentences": 1,
+          "checked_claims": 1,
+          "supported": 0,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 1,
+          "omitted": 0
+        },
+        "search": {
+          "status": "disabled",
+          "queries": [],
+          "provider": "Exa",
+          "message": "Web search is off; only supplied evidence is compared."
+        },
+        "warnings": [],
+        "word_count": 9,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 0,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "user NASA regression",
+      "http_status": 200,
+      "seconds": 3.735,
+      "request": {
+        "text": "Ingenuity completes historic helicopter flight on Mars\n\nOn April 19, 2021, NASA successfully flew its Ingenuity helicopter above the surface of Mars. The small robotic aircraft rose approximately three metres, hovered for about thirty seconds, and landed safely. Its total flight lasted 39.1 seconds.\n\nThe helicopter operated autonomously using onboard navigation and control software. NASA’s Perseverance rover recorded the flight and helped transmit information to Earth. The experiment demonstrated that an aircraft could achieve powered, controlled flight in the thin Martian atmosphere. Ingenuity was a technology demonstration designed to explore possibilities for future aerial exploration.\n",
+        "search_web": true
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "Model needs review",
+        "summary": "1 of 7 checked statements are supported; 0 contradicted; 6 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "On April 19, 2021, NASA successfully flew its Ingenuity helicopter above the surface of Mars.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.041794618381534324,
+              "entailment": 0.8688172663926437,
+              "neutral": 0.08938811522582196
+            },
+            "confidence": 0.8688172663926437,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S4",
+                "relevance": 0.2596,
+                "scores": {
+                  "contradiction": 0.041794618381534324,
+                  "entailment": 0.8688172663926437,
+                  "neutral": 0.08938811522582196
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8688172663926437,
+                "truncated": false,
+                "token_count": 76,
+                "passage_sha256": "e7323e481ffb06d05ead480d59ca39a8d3ae90c637e0580c367556dfa5396d84",
+                "passage_word_count": 30
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.2027,
+                "scores": {
+                  "contradiction": 0.037005013181303455,
+                  "entailment": 0.8618562211823702,
+                  "neutral": 0.10113876563632646
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8618562211823702,
+                "truncated": false,
+                "token_count": 56,
+                "passage_sha256": "d454d49eb567131e472536cfa7f477edd3399ba3ad034fa12eac669e9ce50e5f",
+                "passage_word_count": 23
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.2154,
+                "scores": {
+                  "contradiction": 0.04164680190496908,
+                  "entailment": 0.8133103689473254,
+                  "neutral": 0.1450428291477056
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8133103689473254,
+                "truncated": false,
+                "token_count": 73,
+                "passage_sha256": "f143de9c2a79ec7891cf76d722b683a4c5c1c28d96afaba2abcc7ce5a928c555",
+                "passage_word_count": 31
+              }
+            ]
+          },
+          {
+            "id": "C2",
+            "text": "The small robotic aircraft rose approximately three metres, hovered for about thirty seconds, and landed safely.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.06077800616861136,
+              "entailment": 0.7297051979915471,
+              "neutral": 0.20951679583984148
+            },
+            "confidence": 0.7297051979915471,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S3",
+                "relevance": 0.1228,
+                "scores": {
+                  "contradiction": 0.06077800616861136,
+                  "entailment": 0.7297051979915471,
+                  "neutral": 0.20951679583984148
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.7297051979915471,
+                "truncated": false,
+                "token_count": 113,
+                "passage_sha256": "625346b9dfb008fb03b1cee5d7d61f3216bf1a3eb59dd56865ca4898644ba1fc",
+                "passage_word_count": 69
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.1249,
+                "scores": {
+                  "contradiction": 0.03687625575037911,
+                  "entailment": 0.4563082436291228,
+                  "neutral": 0.5068155006204981
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5068155006204981,
+                "truncated": false,
+                "token_count": 54,
+                "passage_sha256": "28cabfd385d503eb4fb2af0e1b16625b869ebb1a7e7f924ecadfc3549ca1b474",
+                "passage_word_count": 23
+              },
+              {
+                "source_id": "S3",
+                "relevance": 0.1637,
+                "scores": {
+                  "contradiction": 0.1650364965310092,
+                  "entailment": 0.37246622743460084,
+                  "neutral": 0.4624972760343898
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.4624972760343898,
+                "truncated": false,
+                "token_count": 77,
+                "passage_sha256": "5a291a80f69f0d293a50c134fe2513eee45d1427d0e922f6998ac155c441b239",
+                "passage_word_count": 44
+              }
+            ]
+          },
+          {
+            "id": "C3",
+            "text": "Its total flight lasted 39.1 seconds.",
+            "verdict": "supported",
+            "label": "Supported by this evidence",
+            "scores": {
+              "contradiction": 0.018614860249215635,
+              "entailment": 0.9650732617436064,
+              "neutral": 0.01631187800717792
+            },
+            "confidence": 0.9650732617436064,
+            "model_prediction": "entailment",
+            "decision_reason": "The validation-selected threshold and margin are met.",
+            "reason": "A compared passage supports this statement above the validation-selected threshold.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.2598,
+                "scores": {
+                  "contradiction": 0.018614860249215635,
+                  "entailment": 0.9650732617436064,
+                  "neutral": 0.01631187800717792
+                },
+                "relation": "entailment",
+                "decision": "decisive",
+                "decision_reason": "The validation-selected threshold and margin are met.",
+                "raw_relation": "entailment",
+                "confidence": 0.9650732617436064,
+                "truncated": false,
+                "token_count": 49,
+                "passage_sha256": "c1d5ffa60f1c8fa75965e9e2ab8adc39c522019a8964c0b7528c33280b6e1207",
+                "passage_word_count": 30
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.3563,
+                "scores": {
+                  "contradiction": 0.02796576191440297,
+                  "entailment": 0.9473023429432447,
+                  "neutral": 0.024731895142352432
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.9473023429432447,
+                "truncated": false,
+                "token_count": 37,
+                "passage_sha256": "abc4d22cb13f35c75d66b2a9a3f544dff0099bba0cd50634d8dd36b7f04fb517",
+                "passage_word_count": 20
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.2252,
+                "scores": {
+                  "contradiction": 0.027314476472879816,
+                  "entailment": 0.9436672677902588,
+                  "neutral": 0.02901825573686137
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.9436672677902588,
+                "truncated": false,
+                "token_count": 67,
+                "passage_sha256": "578addb261a2e61fe2a7edfa7cead5303b066c80559f06c8a1d190f8c7554bb4",
+                "passage_word_count": 43
+              }
+            ]
+          },
+          {
+            "id": "C4",
+            "text": "The helicopter operated autonomously using onboard navigation and control software.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.023445033015413876,
+              "entailment": 0.7471135099012409,
+              "neutral": 0.2294414570833451
+            },
+            "confidence": 0.7471135099012409,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.167,
+                "scores": {
+                  "contradiction": 0.023445033015413876,
+                  "entailment": 0.7471135099012409,
+                  "neutral": 0.2294414570833451
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.7471135099012409,
+                "truncated": false,
+                "token_count": 49,
+                "passage_sha256": "46876073b22aca9658ce9981b153e5432e25d6dd46fafba721bbe94456b8eabf",
+                "passage_word_count": 23
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.1351,
+                "scores": {
+                  "contradiction": 0.08233177017030247,
+                  "entailment": 0.5421820367976953,
+                  "neutral": 0.37548619303200226
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.5421820367976953,
+                "truncated": false,
+                "token_count": 101,
+                "passage_sha256": "03e62ba98c91f92ef558d0dbebadf487c66e2b6fa427a2cacb90360e83f05216",
+                "passage_word_count": 67
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.1089,
+                "scores": {
+                  "contradiction": 0.18793826995232696,
+                  "entailment": 0.1586308284100558,
+                  "neutral": 0.6534309016376173
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.6534309016376173,
+                "truncated": false,
+                "token_count": 31,
+                "passage_sha256": "0eab3519aaa128300cc179c6094a48da085c692df858cb020b66db33d2ff380f",
+                "passage_word_count": 12
+              }
+            ]
+          },
+          {
+            "id": "C5",
+            "text": "NASA’s Perseverance rover recorded the flight and helped transmit information to Earth.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.05771542950954073,
+              "entailment": 0.16380930016429057,
+              "neutral": 0.7784752703261687
+            },
+            "confidence": 0.7784752703261687,
+            "model_prediction": "neutral",
+            "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.1574,
+                "scores": {
+                  "contradiction": 0.05771542950954073,
+                  "entailment": 0.16380930016429057,
+                  "neutral": 0.7784752703261687
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.7784752703261687,
+                "truncated": false,
+                "token_count": 63,
+                "passage_sha256": "37808331a47760df9262d34ba69fe6c232058942a4cff7e60502d773fa31de19",
+                "passage_word_count": 26
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.1242,
+                "scores": {
+                  "contradiction": 0.0643529743473739,
+                  "entailment": 0.3359327487985962,
+                  "neutral": 0.5997142768540299
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5997142768540299,
+                "truncated": false,
+                "token_count": 79,
+                "passage_sha256": "30d4d9f583f78e13f0eb39f3adc797bde37dbc9cfa8bf168e85d7a5868d75c8e",
+                "passage_word_count": 30
+              },
+              {
+                "source_id": "S3",
+                "relevance": 0.114,
+                "scores": {
+                  "contradiction": 0.026904672959773036,
+                  "entailment": 0.3855784345996861,
+                  "neutral": 0.5875168924405408
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5875168924405408,
+                "truncated": false,
+                "token_count": 50,
+                "passage_sha256": "f6e3f0e0737e0421f8286655116c4ea5eb64412511c895420b6c649a84c63dd4",
+                "passage_word_count": 21
+              }
+            ]
+          },
+          {
+            "id": "C6",
+            "text": "The experiment demonstrated that an aircraft could achieve powered, controlled flight in the thin Martian atmosphere.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.027074330098272655,
+              "entailment": 0.528221159267897,
+              "neutral": 0.4447045106338303
+            },
+            "confidence": 0.528221159267897,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.1307,
+                "scores": {
+                  "contradiction": 0.027074330098272655,
+                  "entailment": 0.528221159267897,
+                  "neutral": 0.4447045106338303
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.528221159267897,
+                "truncated": false,
+                "token_count": 62,
+                "passage_sha256": "a2d5c3a5528416289d0c6ffe9e1f5d5fa0a008ffdbc4e2fbbffc311567717ffc",
+                "passage_word_count": 29
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.1707,
+                "scores": {
+                  "contradiction": 0.0393817032088731,
+                  "entailment": 0.38349031513811144,
+                  "neutral": 0.5771279816530155
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5771279816530155,
+                "truncated": false,
+                "token_count": 51,
+                "passage_sha256": "d33f344393a712db3f4302b33488eb8269aa9d11f180c3e4220e7891159525fc",
+                "passage_word_count": 20
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.1636,
+                "scores": {
+                  "contradiction": 0.037992188068698966,
+                  "entailment": 0.41779126948374573,
+                  "neutral": 0.5442165424475552
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.5442165424475552,
+                "truncated": false,
+                "token_count": 54,
+                "passage_sha256": "d454d49eb567131e472536cfa7f477edd3399ba3ad034fa12eac669e9ce50e5f",
+                "passage_word_count": 23
+              }
+            ]
+          },
+          {
+            "id": "C7",
+            "text": "Ingenuity was a technology demonstration designed to explore possibilities for future aerial exploration.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.013908333872787743,
+              "entailment": 0.01574169639715188,
+              "neutral": 0.9703499697300604
+            },
+            "confidence": 0.9703499697300604,
+            "model_prediction": "neutral",
+            "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S2",
+                "relevance": 0.3866,
+                "scores": {
+                  "contradiction": 0.013908333872787743,
+                  "entailment": 0.01574169639715188,
+                  "neutral": 0.9703499697300604
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9703499697300604,
+                "truncated": false,
+                "token_count": 28,
+                "passage_sha256": "9fb7078eeaec1345c8f70d23f23fb5fc58e53f7df9021baaceb0243ac3852a20",
+                "passage_word_count": 5
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.1831,
+                "scores": {
+                  "contradiction": 0.03829516352354011,
+                  "entailment": 0.03412823326994418,
+                  "neutral": 0.9275766032065157
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9275766032065157,
+                "truncated": false,
+                "token_count": 45,
+                "passage_sha256": "5fa2e7caea448accdde35ab824496cb077885936ee628891a20c196c173256f5",
+                "passage_word_count": 14
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.1423,
+                "scores": {
+                  "contradiction": 0.012356739092893622,
+                  "entailment": 0.06155903406081898,
+                  "neutral": 0.9260842268462874
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9260842268462874,
+                "truncated": false,
+                "token_count": 66,
+                "passage_sha256": "682c77786ed22e8db2dc52182b33e1ec486d9dbfa75dc2c410724932e7253fbb",
+                "passage_word_count": 34
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+            "domain": "www.nasa.gov",
+            "published_at": "2021-04-19T15:22:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:39.851397+00:00",
+            "kind": "web",
+            "id": "S1"
+          },
+          {
+            "url": "https://science.nasa.gov/resource/nasas-ingenuity-mars-helicopter-successfully-completes-first-flight/",
+            "domain": "science.nasa.gov",
+            "published_at": "2021-04-19T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:39.851499+00:00",
+            "kind": "web",
+            "id": "S2"
+          },
+          {
+            "url": "https://apnews.com/article/science-planets-mars-1f39e9b9c56ad3bbe3634aeabfa4abaf",
+            "domain": "apnews.com",
+            "published_at": "2021-04-19T20:20:21.000Z",
+            "retrieved_at": "2026-10-25T14:59:39.851719+00:00",
+            "kind": "web",
+            "id": "S3"
+          },
+          {
+            "url": "https://www.jpl.nasa.gov/videos/nasas-ingenuity-mars-helicopter-successfully-completes-first-flight/",
+            "domain": "www.jpl.nasa.gov",
+            "published_at": "2021-04-19T07:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:39.851812+00:00",
+            "kind": "web",
+            "id": "S4"
+          },
+          {
+            "url": "https://www.nature.com/articles/d41586-021-00909-z",
+            "domain": "www.nature.com",
+            "published_at": "2021-04-19T03:02:12.000Z",
+            "retrieved_at": "2026-10-25T14:59:39.851885+00:00",
+            "kind": "web",
+            "id": "S5"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 7,
+          "checked_claims": 7,
+          "supported": 1,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 6,
+          "omitted": 0
+        },
+        "search": {
+          "status": "ok",
+          "queries": [
+            "Reports and primary sources about: Ingenuity completes historic helicopter flight on Mars. On April 19, 2021, NASA successfully flew its Ingenuity helicopter above the surface of Mars. The small robotic aircraft rose approximately three metres, hovered for about thirty seconds, and landed safely. Its total flight lasted 39.1 seconds."
+          ],
+          "provider": "Exa",
+          "message": "Retrieved source passages. Search results may be incomplete or outdated."
+        },
+        "warnings": [],
+        "word_count": 97,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 2155,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "CERN true event",
+      "http_status": 200,
+      "seconds": 1.484,
+      "request": {
+        "text": "On 4 July 2012, the ATLAS and CMS collaborations at CERN announced a new particle consistent with the Higgs boson.",
+        "search_web": true
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "Model needs review",
+        "summary": "0 of 1 checked statements are supported; 0 contradicted; 1 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "On 4 July 2012, the ATLAS and CMS collaborations at CERN announced a new particle consistent with the Higgs boson.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.09866141753831544,
+              "entailment": 0.8624251660747223,
+              "neutral": 0.038913416386962246
+            },
+            "confidence": 0.8624251660747223,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S5",
+                "relevance": 0.4022,
+                "scores": {
+                  "contradiction": 0.09866141753831544,
+                  "entailment": 0.8624251660747223,
+                  "neutral": 0.038913416386962246
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8624251660747223,
+                "truncated": false,
+                "token_count": 139,
+                "passage_sha256": "ffda82071880f99f819636650a60b5a4cc2c7878c121e28a581ef8ce83d8b482",
+                "passage_word_count": 74
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.4223,
+                "scores": {
+                  "contradiction": 0.06783117240816047,
+                  "entailment": 0.8185618392480323,
+                  "neutral": 0.11360698834380713
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8185618392480323,
+                "truncated": false,
+                "token_count": 67,
+                "passage_sha256": "3f4830f752492c616143c28e0ed164749d62dd60316828cb3f7e25c7480443ba",
+                "passage_word_count": 30
+              },
+              {
+                "source_id": "S2",
+                "relevance": 0.4978,
+                "scores": {
+                  "contradiction": 0.02711755560004012,
+                  "entailment": 0.02812070667567033,
+                  "neutral": 0.9447617377242896
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9447617377242896,
+                "truncated": false,
+                "token_count": 57,
+                "passage_sha256": "06011bb20245900c1fb0d86b6dbffe33946a6b4e476e86c00f59115fb23f2bea",
+                "passage_word_count": 22
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://cds.cern.ch/journal/CERNBulletin/2012/29/News%20Articles/1459454?ln=en",
+            "domain": "cds.cern.ch",
+            "published_at": "2012-07-04T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:42.394495+00:00",
+            "kind": "web",
+            "id": "S1"
+          },
+          {
+            "url": "https://home.cern/science/physics/higgs-boson/",
+            "domain": "home.cern",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:42.394574+00:00",
+            "kind": "web",
+            "id": "S2"
+          },
+          {
+            "url": "https://www.science.org/doi/10.1126/science.1232005",
+            "domain": "www.science.org",
+            "published_at": "2012-12-21T00:51:53.000Z",
+            "retrieved_at": "2026-10-25T14:59:42.394641+00:00",
+            "kind": "web",
+            "id": "S3"
+          },
+          {
+            "url": "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGG-2012-27/",
+            "domain": "atlas.web.cern.ch",
+            "published_at": "2012-07-31T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:42.394702+00:00",
+            "kind": "web",
+            "id": "S4"
+          },
+          {
+            "url": "https://home.web.cern.ch/news/news/experiments/happy-5th-anniversary-higgs-boson",
+            "domain": "home.web.cern.ch",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:42.394779+00:00",
+            "kind": "web",
+            "id": "S5"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 1,
+          "checked_claims": 1,
+          "supported": 0,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 1,
+          "omitted": 0
+        },
+        "search": {
+          "status": "ok",
+          "queries": [
+            "Reports and primary sources about: On 4 July 2012, the ATLAS and CMS collaborations at CERN announced a new particle consistent with the Higgs boson."
+          ],
+          "provider": "Exa",
+          "message": "Retrieved source passages. Search results may be incomplete or outdated."
+        },
+        "warnings": [],
+        "word_count": 20,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 1190,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "CERN altered false claim",
+      "http_status": 200,
+      "seconds": 1.25,
+      "request": {
+        "text": "In July 2012, the ATLAS and CMS experiments at CERN announced that no new particle consistent with the Higgs boson had been found.",
+        "search_web": true
+      },
+      "response": {
+        "assessment": "contradicted",
+        "label": "Contradictions found",
+        "summary": "0 of 1 checked statements are supported; 1 contradicted; 0 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "In July 2012, the ATLAS and CMS experiments at CERN announced that no new particle consistent with the Higgs boson had been found.",
+            "verdict": "contradicted",
+            "label": "Contradicted by this evidence",
+            "scores": {
+              "contradiction": 0.9326088345168095,
+              "entailment": 0.009168400216538483,
+              "neutral": 0.05822276526665202
+            },
+            "confidence": 0.9326088345168095,
+            "model_prediction": "contradiction",
+            "decision_reason": "The validation-selected threshold and margin are met.",
+            "reason": "A compared passage contradicts this statement above the validation-selected threshold.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.2335,
+                "scores": {
+                  "contradiction": 0.9326088345168095,
+                  "entailment": 0.009168400216538483,
+                  "neutral": 0.05822276526665202
+                },
+                "relation": "contradiction",
+                "decision": "decisive",
+                "decision_reason": "The validation-selected threshold and margin are met.",
+                "raw_relation": "contradiction",
+                "confidence": 0.9326088345168095,
+                "truncated": false,
+                "token_count": 53,
+                "passage_sha256": "57c9ddebdd41f14b2f3b1dcf324bc95af3ea6b47ec7d23b1d0f0a4c2864a5e10",
+                "passage_word_count": 12
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.2192,
+                "scores": {
+                  "contradiction": 0.8342747591010603,
+                  "entailment": 0.009390042387108758,
+                  "neutral": 0.1563351985118309
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "contradiction",
+                "confidence": 0.8342747591010603,
+                "truncated": false,
+                "token_count": 77,
+                "passage_sha256": "456e0ba2080bf86096f898b86e2cb70e7ab809a5b64b2f4251231e5955772108",
+                "passage_word_count": 27
+              },
+              {
+                "source_id": "S1",
+                "relevance": 0.2337,
+                "scores": {
+                  "contradiction": 0.5145146106840246,
+                  "entailment": 0.008833645045844786,
+                  "neutral": 0.4766517442701306
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "contradiction",
+                "confidence": 0.5145146106840246,
+                "truncated": false,
+                "token_count": 40,
+                "passage_sha256": "eb5c7938cec609824e38b266b154b746a7570a4a10b23b2f5dadb0b40f7919b1",
+                "passage_word_count": 6
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://cds.cern.ch/journal/CERNBulletin/2012/29/News%20Articles/1459454?ln=en",
+            "domain": "cds.cern.ch",
+            "published_at": "2012-07-04T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:43.895519+00:00",
+            "kind": "web",
+            "id": "S1"
+          },
+          {
+            "url": "http://cds.cern.ch/record/1440863",
+            "domain": "cds.cern.ch",
+            "published_at": "2012-04-14T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:43.895591+00:00",
+            "kind": "web",
+            "id": "S2"
+          },
+          {
+            "url": "https://doi.org/10.1016/j.physletb.2012.08.020",
+            "domain": "doi.org",
+            "published_at": "2012-07-31T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:43.895664+00:00",
+            "kind": "web",
+            "id": "S3"
+          },
+          {
+            "url": "https://arxiv.org/abs/1207.0210v2",
+            "domain": "arxiv.org",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:43.895710+00:00",
+            "kind": "web",
+            "id": "S4"
+          },
+          {
+            "url": "https://web.archive.org/web/20120707132113/http:/www.atlas.ch/news/2012/latest-results-from-higgs-search.html",
+            "domain": "web.archive.org",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:43.895814+00:00",
+            "kind": "web",
+            "id": "S5"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 1,
+          "checked_claims": 1,
+          "supported": 0,
+          "contradicted": 1,
+          "conflicting": 0,
+          "insufficient_evidence": 0,
+          "omitted": 0
+        },
+        "search": {
+          "status": "ok",
+          "queries": [
+            "Reports and primary sources about: In July 2012, the ATLAS and CMS experiments at CERN announced that no new particle consistent with the Higgs boson had been found."
+          ],
+          "provider": "Exa",
+          "message": "Retrieved source passages. Search results may be incomplete or outdated."
+        },
+        "warnings": [],
+        "word_count": 23,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 937,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    },
+    {
+      "name": "Chandrayaan-3 true event",
+      "http_status": 200,
+      "seconds": 1.437,
+      "request": {
+        "text": "On August 23, 2023, India's Chandrayaan-3 mission successfully landed on the Moon. The mission included the Vikram lander and the Pragyan rover.",
+        "search_web": true
+      },
+      "response": {
+        "assessment": "insufficient_evidence",
+        "label": "Model needs review",
+        "summary": "0 of 2 checked statements are supported; 0 contradicted; 2 unresolved.",
+        "claims": [
+          {
+            "id": "C1",
+            "text": "On August 23, 2023, India's Chandrayaan-3 mission successfully landed on the Moon.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.02911218240673371,
+              "entailment": 0.705435667440206,
+              "neutral": 0.2654521501530603
+            },
+            "confidence": 0.705435667440206,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "relevance": 0.3448,
+                "scores": {
+                  "contradiction": 0.02911218240673371,
+                  "entailment": 0.705435667440206,
+                  "neutral": 0.2654521501530603
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.705435667440206,
+                "truncated": false,
+                "token_count": 76,
+                "passage_sha256": "79fe09b72a814522806f9ca08534fa0756d6c09a2776b72fe1389c860fa580f3",
+                "passage_word_count": 25
+              },
+              {
+                "source_id": "S4",
+                "relevance": 0.3701,
+                "scores": {
+                  "contradiction": 0.026420466878089185,
+                  "entailment": 0.021441767801956585,
+                  "neutral": 0.9521377653199543
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9521377653199543,
+                "truncated": false,
+                "token_count": 39,
+                "passage_sha256": "60f5220c642e061b89be547e60dfe683f2b2adaf4de2617054b1e4d544dab209",
+                "passage_word_count": 7
+              },
+              {
+                "source_id": "S4",
+                "relevance": 0.3609,
+                "scores": {
+                  "contradiction": 0.02750896123517206,
+                  "entailment": 0.039125154739871264,
+                  "neutral": 0.9333658840249568
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model predicts neutral: this passage does not establish the statement.",
+                "raw_relation": "neutral",
+                "confidence": 0.9333658840249568,
+                "truncated": false,
+                "token_count": 53,
+                "passage_sha256": "cea61330d0666f24eb0ee0843157ad60743fc24fd1f4cba3c844938e584e13cb",
+                "passage_word_count": 14
+              }
+            ]
+          },
+          {
+            "id": "C2",
+            "text": "The mission included the Vikram lander and the Pragyan rover.",
+            "verdict": "insufficient_evidence",
+            "label": "Insufficient evidence",
+            "scores": {
+              "contradiction": 0.0558213703864981,
+              "entailment": 0.9063105262735526,
+              "neutral": 0.03786810333994932
+            },
+            "confidence": 0.9063105262735526,
+            "model_prediction": "entailment",
+            "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+            "reason": "The compared passages do not support a confident support/contradiction decision. This does not mean the claim is false.",
+            "evidence": [
+              {
+                "source_id": "S5",
+                "relevance": 0.2235,
+                "scores": {
+                  "contradiction": 0.0558213703864981,
+                  "entailment": 0.9063105262735526,
+                  "neutral": 0.03786810333994932
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.9063105262735526,
+                "truncated": false,
+                "token_count": 74,
+                "passage_sha256": "1afafa549ffb3a743c9368c0286f2df0679dd17f9417333b4cadd2e2aadabd6c",
+                "passage_word_count": 35
+              },
+              {
+                "source_id": "S5",
+                "relevance": 0.1997,
+                "scores": {
+                  "contradiction": 0.036691558896337496,
+                  "entailment": 0.8656728690511526,
+                  "neutral": 0.0976355720525098
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.8656728690511526,
+                "truncated": false,
+                "token_count": 61,
+                "passage_sha256": "efa2cdb16883b7fce05cd8bfb73d526e11e61bba32784f860c69bbe8c9d3f049",
+                "passage_word_count": 31
+              },
+              {
+                "source_id": "S5",
+                "relevance": 0.2465,
+                "scores": {
+                  "contradiction": 0.3494786777994601,
+                  "entailment": 0.3716256715250797,
+                  "neutral": 0.27889565067546024
+                },
+                "relation": "review",
+                "decision": "review",
+                "decision_reason": "The model has a tentative prediction, but the validation-selected threshold or margin is not met.",
+                "raw_relation": "entailment",
+                "confidence": 0.3716256715250797,
+                "truncated": false,
+                "token_count": 33,
+                "passage_sha256": "bd20e0b154db523516832d5cb54ab945db2f27484536e5f1206587b4e8db8b09",
+                "passage_word_count": 7
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/aug/doc2023828246201.pdf",
+            "domain": "static.pib.gov.in",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:45.051052+00:00",
+            "kind": "web",
+            "id": "S1"
+          },
+          {
+            "url": "https://www.isro.gov.in/Chandrayaan3.html",
+            "domain": "www.isro.gov.in",
+            "published_at": null,
+            "retrieved_at": "2026-10-25T14:59:45.051135+00:00",
+            "kind": "web",
+            "id": "S2"
+          },
+          {
+            "url": "https://www.nytimes.com/2023/08/23/science/chandrayaan-3-india-moon-landing.html",
+            "domain": "www.nytimes.com",
+            "published_at": "2023-08-23T15:51:11.000Z",
+            "retrieved_at": "2026-10-25T14:59:45.051183+00:00",
+            "kind": "web",
+            "id": "S3"
+          },
+          {
+            "url": "https://www.esa.int/Enabling_Support/Operations/India_s_Chandrayaan-3_successfully_lands_on_the_Moon",
+            "domain": "www.esa.int",
+            "published_at": "2023-08-23T00:00:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:45.051238+00:00",
+            "kind": "web",
+            "id": "S4"
+          },
+          {
+            "url": "https://www.thehindu.com/sci-tech/science/isro-chandrayaan-3-vikram-lander-touch-down-live-updates/article67219323.ece",
+            "domain": "www.thehindu.com",
+            "published_at": "2023-08-23T09:30:00.000Z",
+            "retrieved_at": "2026-10-25T14:59:45.051308+00:00",
+            "kind": "web",
+            "id": "S5"
+          }
+        ],
+        "coverage": {
+          "total_sentences": 2,
+          "checked_claims": 2,
+          "supported": 0,
+          "contradicted": 0,
+          "conflicting": 0,
+          "insufficient_evidence": 2,
+          "omitted": 0
+        },
+        "search": {
+          "status": "ok",
+          "queries": [
+            "Reports and primary sources about: On August 23, 2023, India's Chandrayaan-3 mission successfully landed on the Moon. The mission included the Vikram lander and the Pragyan rover."
+          ],
+          "provider": "Exa",
+          "message": "Retrieved source passages. Search results may be incomplete or outdated."
+        },
+        "warnings": [],
+        "word_count": 22,
+        "model": {
+          "name": "Fine-tuned MiniLM evidence NLI",
+          "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+          "max_tokens": 256
+        },
+        "latency_ms": 1117,
+        "limitations": [
+          "Support means agreement with the cited passage, not proof that the source or whole article is true.",
+          "Search covers a selection of sources. Copied reporting is not independent corroboration.",
+          "The model can miss numerical changes, negation, satire and context. Open the citations before relying on a result."
+        ]
+      }
+    }
+  ],
+  "all_checks_passed": true,
+  "article_extraction": {
+    "source_url": "https://home.cern/science/physics/higgs-boson",
+    "title": "The Higgs boson",
+    "word_count": 747,
+    "http_status": 200
+  },
+  "delivery_note": "Source excerpts are omitted from this delivery audit. URLs, passage hashes, scores and outcomes are retained; source text can be read at its original URL."
+}

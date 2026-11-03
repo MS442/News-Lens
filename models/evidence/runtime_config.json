@@ -1,0 +1,51 @@
+{
+  "max_tokens": 256,
+  "temperature": 1.2155747944392563,
+  "thresholds": {
+    "contradiction": 0.91,
+    "entailment": 0.95
+  },
+  "minimum_margin": 0.15,
+  "labels": {
+    "0": "contradiction",
+    "1": "entailment",
+    "2": "neutral"
+  },
+  "model_name": "Fine-tuned MiniLM evidence NLI",
+  "label_order": [
+    "contradiction",
+    "entailment",
+    "neutral"
+  ],
+  "expected_inputs": [
+    "input_ids",
+    "attention_mask"
+  ],
+  "pair_order": [
+    "evidence",
+    "claim"
+  ],
+  "truncation": "longest_first",
+  "sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+  "tokenizer_sha256": "12ba6d511bc9cd3f6a33f304868a80a26bc8c39e2b29b3c87d3a72ad2e17b593",
+  "base_model": "cross-encoder/nli-MiniLM2-L6-H768",
+  "base_revision": "b95119ce93d3e065de6214e38cd4a97b0f2f2c6d",
+  "evaluation_pending": false,
+  "data_manifest_sha256": "d3bd923b9e202cb00172b31b22e6ab09e38caf1ccc94216ca706d9d25121c53f",
+  "threshold_selection": {
+    "contradiction": {
+      "threshold": 0.91,
+      "target_met": true,
+      "validation_predictions": 407,
+      "validation_precision": 0.9533169533169533,
+      "disabled_if_target_unmet": true
+    },
+    "entailment": {
+      "threshold": 0.95,
+      "target_met": true,
+      "validation_predictions": 302,
+      "validation_precision": 0.9503311258278145,
+      "disabled_if_target_unmet": true
+    }
+  }
+}

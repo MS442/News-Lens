@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-25T14:17:18.653407+00:00",
+  "seed": 20261025,
+  "task": "Evidence-conditioned three-way natural language inference, not article-style or reporting-quality classification",
+  "labels": {
+    "0": "contradiction",
+    "1": "entailment",
+    "2": "neutral"
+  },
+  "input_order": [
+    "premise: evidence",
+    "hypothesis: claim"
+  ],
+  "sources": [
+    {
+      "file": "nli_fever_train.parquet",
+      "url": "https://huggingface.co/datasets/pietrolesci/nli_fever/resolve/1eddac63112eee1fdf1966e0bca27a5ff248c772/data/train-00000-of-00001.parquet",
+      "bytes": 46515229,
+      "sha256": "5246faa280c9e57814428bf9fd4ebd6a43e33c6fe46b4d22b3d5530e64fef912"
+    },
+    {
+      "file": "nli_fever_dev.parquet",
+      "url": "https://huggingface.co/datasets/pietrolesci/nli_fever/resolve/1eddac63112eee1fdf1966e0bca27a5ff248c772/data/dev-00000-of-00001.parquet",
+      "bytes": 4441223,
+      "sha256": "9b6259c2065fa09324ded93b4158512db9abb833b1a69fc3fb2a54a68d71f8f0"
+    },
+    {
+      "file": "nli_fever_dataset_infos.json",
+      "url": "https://huggingface.co/datasets/pietrolesci/nli_fever/resolve/1eddac63112eee1fdf1966e0bca27a5ff248c772/dataset_infos.json",
+      "bytes": 1209,
+      "sha256": "3950aaba53a518581f79752831b9a670716a47a4bad5bf8636afdc5dd251b1f4"
+    },
+    {
+      "file": "fever_original_train.jsonl",
+      "url": "https://fever.ai/download/fever/train.jsonl",
+      "bytes": 33024303,
+      "sha256": "eba7e8f87076753f8494718b9a857827af7bf73e76c9e4b75420207d26e588b6"
+    },
+    {
+      "file": "fever_official_dev.jsonl",
+      "url": "https://fever.ai/download/fever/shared_task_dev.jsonl",
+      "bytes": 4349935,
+      "sha256": "e89865bfe1b4dd054e03dd57d7241a6fde24862905f31117cf0cd719f7c78df7"
+    },
+    {
+      "file": "fever_license.html",
+      "url": "https://fever.ai/download/fever/license.html",
+      "bytes": 670,
+      "sha256": "eaddbd6e2854b45e6925bac9171fb6a2438492dc0efd4fda80144e836ae1ad05"
+    },
+    {
+      "file": "anli_v1.0.zip",
+      "url": "https://dl.fbaipublicfiles.com/anli/anli_v1.0.zip",
+      "bytes": 18708061,
+      "sha256": "e5c058f2bb4e6190b0651badca2c590e45db95248f8b28cde674615ee40820bf"
+    },
+    {
+      "file": "anli_license.txt",
+      "url": "https://raw.githubusercontent.com/facebookresearch/anli/main/LICENSE",
+      "bytes": 19332,
+      "sha256": "82656a050544ab820c9aa7b61433f5181f8e80cacd042377140962a3e3eb5721"
+    },
+    {
+      "file": "scifact_data.tar.gz",
+      "url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+      "bytes": 3115079,
+      "sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be"
+    },
+    {
+      "file": "scifact_license.md",
+      "url": "https://raw.githubusercontent.com/allenai/scifact/master/LICENSE.md",
+      "bytes": 542,
+      "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806"
+    }
+  ],
+  "source_licenses": {
+    "FEVER-NLI": {
+      "primary": "https://github.com/easonnie/combine-FEVER-NSMN/blob/master/other_resources/nli_fever.md",
+      "license": "Original Wikipedia article terms; fallback CC BY-SA 3.0 per FEVER license",
+      "mirror": "pietrolesci/nli_fever",
+      "mirror_revision": "1eddac63112eee1fdf1966e0bca27a5ff248c772",
+      "note": "Author's Dropbox URL returned HTML rather than ZIP. Mirror claim IDs, claim text and labels verified against every corresponding original FEVER row."
+    },
+    "ANLI": {
+      "primary": "https://github.com/facebookresearch/anli",
+      "license": "CC BY-NC 4.0"
+    },
+    "SciFact": {
+      "primary": "https://github.com/allenai/scifact",
+      "license": "Claims/annotations CC BY 4.0; abstracts ODC-By 1.0"
+    }
+  },
+  "split_strategy": "Global normalized claim hashes group all evidence variants. Reserve original FEVER dev, ANLI test, SciFact dev and unused ANLI dev claims before any training sampling. From remaining original training only, select independent seeded label-balanced claim groups for validation/test and cap FEVER/ANLI training (one pair per claim). SciFact retains all remaining claim-document pairs, with 25 groups per primary label reserved for each internal holdout. External sets retain source labels/distributions except documented empty-input, regression-topic, exact-pair duplicate/conflict and cross-source claim-overlap exclusions; no balancing is applied to external data.",
+  "cleaning": "Unicode NFC, HTML entity decoding, whitespace only. Preserve negation, numbers, case and punctuation; no stemming or stopword removal. No source metadata, label explanations or ANLI model labels enter inputs.",
+  "nasa_regression_policy": "Exclude every pair mentioning Ingenuity from all prepared sets; provided NASA article is never added to training or calibration.",
+  "exclusions": {
+    "external_scifact": {
+      "extra_exact_pair_records": 0,
+      "claim_already_in_other_external_source": 0
+    },
+    "external_anli": {
+      "nasa_ingenuity_regression_topic": 1,
+      "extra_exact_pair_records": 0,
+      "claim_already_in_other_external_source": 0
+    },
+    "external_fever": {
+      "empty_premise_or_hypothesis": 1789,
+      "nasa_ingenuity_regression_topic": 5,
+      "extra_exact_pair_records": 301,
+      "conflicting_exact_pair_records": 116,
+      "claim_already_in_other_external_source": 0
+    },
+    "training_pool": {
+      "empty_premise_or_hypothesis": 5194,
+      "nasa_ingenuity_regression_topic": 54,
+      "claim_overlaps_reserved_original_holdout": 80,
+      "extra_exact_pair_records": 10876,
+      "conflicting_exact_pair_records": 1596
+    }
+  },
+  "audit": {
+    "fever_orientation": {
+      "mirror_premise": "claim; moved to canonical hypothesis",
+      "mirror_hypothesis": "evidence; moved to canonical premise",
+      "canonical_claim_text": "Original FEVER claim text after whitespace/HTML normalization",
+      "raw_integer_mapping": {
+        "0": 1,
+        "1": 2,
+        "2": 0
+      },
+      "verified_against_official_fever": {
+        "train": {
+          "raw_pairs": 208346,
+          "official_id_text_label_matches": 208346,
+          "raw_label_counts": {
+            "0": 123594,
+            "2": 49113,
+            "1": 35639
+          },
+          "empty_evidence": 5194
+        },
+        "dev": {
+          "raw_pairs": 19998,
+          "official_id_text_label_matches": 19998,
+          "raw_label_counts": {
+            "1": 6666,
+            "0": 6666,
+            "2": 6666
+          },
+          "empty_evidence": 1789
+        }
+      }
+    },
+    "anli": {
+      "raw_split_counts": {
+        "R1/train": {
+          "pairs": 16946,
+          "labels": {
+            "e": 5371,
+            "n": 7052,
+            "c": 4523
+          }
+        },
+        "R1/dev": {
+          "pairs": 1000,
+          "labels": {
+            "c": 333,
+            "e": 334,
+            "n": 333
+          }
+        },
+        "R1/test": {
+          "pairs": 1000,
+          "labels": {
+            "e": 334,
+            "n": 333,
+            "c": 333
+          }
+        },
+        "R2/train": {
+          "pairs": 45460,
+          "labels": {
+            "e": 14448,
+            "c": 10053,
+            "n": 20959
+          }
+        },
+        "R2/dev": {
+          "pairs": 1000,
+          "labels": {
+            "n": 333,
+            "c": 333,
+            "e": 334
+          }
+        },
+        "R2/test": {
+          "pairs": 1000,
+          "labels": {
+            "e": 334,
+            "n": 333,
+            "c": 333
+          }
+        },
+        "R3/train": {
+          "pairs": 100459,
+          "labels": {
+            "e": 32292,
+            "n": 40778,
+            "c": 27389
+          }
+        },
+        "R3/dev": {
+          "pairs": 1200,
+          "labels": {
+            "e": 402,
+            "n": 402,
+            "c": 396
+          }
+        },
+        "R3/test": {
+          "pairs": 1200,
+          "labels": {
+            "e": 402,
+            "n": 402,
+            "c": 396
+          }
+        }
+      },
+      "evidence_field": "context",
+      "label_mapping": {
+        "c": 0,
+        "e": 1,
+        "n": 2
+      },
+      "reason_model_label_tag_emturk_fields": "Excluded from model inputs"
+    },
+    "scifact": {
+      "corpus_abstracts": 5183,
+      "raw_split_counts": {
+        "train": {
+          "claims": 809,
+          "claim_document_pairs": 919,
+          "labels": {
+            "2": 355,
+            "0": 194,
+            "1": 370
+          }
+        },
+        "dev": {
+          "claims": 300,
+          "claim_document_pairs": 339,
+          "labels": {
+            "2": 130,
+            "1": 138,
+            "0": 71
+          }
+        }
+      },
+      "pairing": "One pair per claim/cited abstract (union with annotated evidence documents); full title and abstract, not oracle-selected rationale sentences.",
+      "neutral_semantics": "Cited abstracts without annotated evidence: annotators did not find support/contradiction in that abstract, as documented in official doc/data.md.",
+      "unlabelled_official_test": "Not used"
+    }
+  },
+  "splits": {
+    "train": {
+      "path": "train.jsonl",
+      "records": 90739,
+      "claim_groups": 90652,
+      "class_counts": {
+        "0": 30134,
+        "1": 30311,
+        "2": 30294
+      },
+      "dataset_counts": {
+        "ANLI-R1": 9999,
+        "ANLI-R2": 9999,
+        "ANLI-R3": 9999,
+        "FEVER-NLI": 60000,
+        "SciFact": 742
+      },
+      "sha256": "d3c571b0958fd8c059874e2d3b0e7c621c0df1c1d72e4753785b166372b99344",
+      "bytes": 56458133
+    },
+    "val": {
+      "path": "val.jsonl",
+      "records": 2992,
+      "claim_groups": 2976,
+      "class_counts": {
+        "0": 998,
+        "1": 998,
+        "2": 996
+      },
+      "dataset_counts": {
+        "ANLI-R1": 300,
+        "ANLI-R2": 300,
+        "ANLI-R3": 300,
+        "FEVER-NLI": 2001,
+        "SciFact": 91
+      },
+      "sha256": "ce8d41d66ab015afd6371ebcdcb416a281200afc895f62240c0320489fb86b6d",
+      "bytes": 2013184
+    },
+    "test": {
+      "path": "test.jsonl",
+      "records": 2982,
+      "claim_groups": 2976,
+      "class_counts": {
+        "0": 995,
+        "1": 992,
+        "2": 995
+      },
+      "dataset_counts": {
+        "ANLI-R1": 300,
+        "ANLI-R2": 300,
+        "ANLI-R3": 300,
+        "FEVER-NLI": 2001,
+        "SciFact": 81
+      },
+      "sha256": "af10cd58bddac0a6efcfc6a8aa52f65f67b23de2a538bf1c44869573511ba6a3",
+      "bytes": 1981090
+    },
+    "external_scifact": {
+      "path": "external_scifact.jsonl",
+      "records": 339,
+      "claim_groups": 300,
+      "class_counts": {
+        "0": 71,
+        "1": 138,
+        "2": 130
+      },
+      "dataset_counts": {
+        "SciFact": 339
+      },
+      "sha256": "d92a98f00a1d3510c519248f0e7169b7c4df2e529c515020932385219708458f",
+      "bytes": 670862
+    },
+    "external_anli": {
+      "path": "external_anli.jsonl",
+      "records": 3199,
+      "claim_groups": 3199,
+      "class_counts": {
+        "0": 1062,
+        "1": 1070,
+        "2": 1067
+      },
+      "dataset_counts": {
+        "ANLI-R1": 1000,
+        "ANLI-R2": 1000,
+        "ANLI-R3": 1199
+      },
+      "sha256": "435cb00485e14c3bab5e4e9b2d4b6b5698e254fa7a2a6cd469eeb8cd83ec2887",
+      "bytes": 2139520
+    },
+    "external_fever": {
+      "path": "external_fever.jsonl",
+      "records": 17787,
+      "claim_groups": 17787,
+      "class_counts": {
+        "0": 6110,
+        "1": 6260,
+        "2": 5417
+      },
+      "dataset_counts": {
+        "FEVER-NLI": 17787
+      },
+      "sha256": "becaf2448fd7eea0a4ca5bfab3b2cb137c3bcef5f86888a1e3aa416fc0292de4",
+      "bytes": 11074116
+    }
+  },
+  "cross_split_claim_group_overlaps": {
+    "train__val": 0,
+    "train__test": 0,
+    "train__external_scifact": 0,
+    "train__external_anli": 0,
+    "train__external_fever": 0,
+    "val__test": 0,
+    "val__external_scifact": 0,
+    "val__external_anli": 0,
+    "val__external_fever": 0,
+    "test__external_scifact": 0,
+    "test__external_anli": 0,
+    "test__external_fever": 0,
+    "external_scifact__external_anli": 0,
+    "external_scifact__external_fever": 0,
+    "external_anli__external_fever": 0
+  },
+  "cross_split_exact_pair_overlaps": 0,
+  "limitations": [
+    "Exact normalized claim grouping does not guarantee all paraphrases, event families or shared evidence documents are isolated.",
+    "FEVER external uses retrieved evidence with original claim verdicts; retrieval failures can produce a claim/evidence mismatch. Empty evidence is excluded and counted, so these are not official full benchmark scores.",
+    "Internal label-balanced splits are a controlled diagnostic distribution, not natural internet prevalence.",
+    "Original SciFact dev is a reported external benchmark, not used for fitting; evidence abstracts can be shared across official source partitions.",
+    "NLI predicts consistency with supplied evidence; it cannot establish that the evidence source is accurate or current.",
+    "Public benchmark text may have appeared in upstream language-model pretraining. Our own fine-tuning/checkpoint/calibration partitions are isolated as documented."
+  ]
+}

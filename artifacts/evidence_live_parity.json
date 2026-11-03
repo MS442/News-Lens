@@ -1,0 +1,80 @@
+{
+  "scope": "First 12 eligible frozen validation pairs; deployment numerical consistency only. Not an accuracy sample.",
+  "cases": [
+    {
+      "id": "fever-39a32396-58dd-4c4a-bb42-e4d0a628d02b",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-ea64d991-2e0a-413d-b167-06ac4e011a6b",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-5fe957ec-1591-451b-8719-230e3963efa3",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-fdd896ad-86c5-47c4-8ce1-306e04fbbf54",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-0d4fee18-b9b1-4188-ab0c-ae71a582c664",
+      "max_score_difference": 0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-5ee619bb-360c-40ea-8d29-72a41eb7b5b1",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-aba4137a-f3a6-4291-94bc-861f9dee9767",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-d0df933a-86e7-4179-801b-7990d77614c8",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "anli-936df224-7f4e-4f38-aa92-2ee8c16d961d",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-71d7471b-a84e-4091-b519-2bd078a86033",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "anli-3ee3aaa1-3218-4293-8300-deabb61d3331",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    },
+    {
+      "id": "fever-9793508f-7b18-45a1-9dfb-745cc46fccc9",
+      "max_score_difference": 0.0,
+      "assessment_equal": true,
+      "claims_equal": true
+    }
+  ],
+  "model_sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+  "max_score_difference": 0.0,
+  "passed": true
+}

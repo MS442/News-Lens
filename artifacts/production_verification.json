@@ -1,0 +1,52 @@
+{
+  "url": "https://manan-dl-news-lens.vercel.app",
+  "model_sha256": "1f8e969417f72aff706d2f59de7b06729b29eddc57e7893eba8c81cfec6697b1",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "status": 200
+    },
+    {
+      "path": "/static/app.js",
+      "status": 200
+    }
+  ],
+  "cases": [
+    {
+      "id": "welfake-11978",
+      "label": "Likely reliable",
+      "scores": {
+        "reliable": 0.9942441767564779,
+        "misleading": 0.005755823243522121
+      },
+      "latency_ms": 156.3,
+      "local_score_max_difference": 0.0
+    },
+    {
+      "id": "welfake-60789",
+      "label": "Likely misleading",
+      "scores": {
+        "reliable": 0.002915742589973625,
+        "misleading": 0.9970842574100265
+      },
+      "latency_ms": 306.0,
+      "local_score_max_difference": 0.0
+    }
+  ],
+  "passed": true,
+  "seconds": 11.59,
+  "verified": [
+    "static assets",
+    "Python inference",
+    "metrics/artifact identity",
+    "download",
+    "invalid input",
+    "short-input review",
+    "prediction parity",
+    "explanation parity"
+  ]
+}

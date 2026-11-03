@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Compare news claims with cited source passages and explore transparent model evaluation.">
+  <title>News Lens — Read with perspective</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2357603f'/%3E%3Cpath d='M18 46V18h6l16 20V18h6v28h-6L24 26v20z' fill='%23f7f5ef'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="#check" aria-label="News Lens home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 24V8h4l8 11V8h4v16h-4L12 13v11z"/></svg></span><span>news<span class="brand-light">lens</span><span class="brand-dot">.</span></span></a>
+      <nav class="tabs" role="tablist" aria-label="Workspace"><button id="tab-check" class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-check" data-view="check">Check article</button><button id="tab-results" class="tab" role="tab" aria-selected="false" aria-controls="panel-results" tabindex="-1" data-view="results">Model results</button></nav>
+      <span class="header-note"><span class="status-dot" aria-hidden="true"></span> A little more perspective</span>
+    </header>
+    <main id="main">
+      <section id="panel-check" class="view" role="tabpanel" aria-labelledby="tab-check">
+        <div class="page-intro"><p class="eyebrow"><span class="tiny-rule"></span> FOLLOW THE EVIDENCE</p><h1>A closer look at<br><em>what you read.</em></h1><p class="intro-copy">Compare an article’s claims with source passages.<br class="desktop-break"> See what’s supported, what conflicts, and what still needs checking.</p></div>
+        <div class="workspace-grid evidence-workspace">
+          <section class="card input-card" aria-labelledby="input-heading">
+            <div class="card-heading"><div><span class="step-label">01 / YOUR INPUT</span><h2 id="input-heading">The article</h2></div><button id="clear-button" type="button" class="quiet-button" disabled>Clear</button></div>
+            <div class="input-modes" role="group" aria-label="Article input method"><button id="mode-text" type="button" class="input-mode is-active" aria-pressed="true" data-input-mode="text">Paste text</button><button id="mode-url" type="button" class="input-mode" aria-pressed="false" data-input-mode="url">Article link</button></div>
+            <div id="url-entry" class="url-entry" hidden><label for="article-url" class="field-label">Article URL</label><div class="url-field-row"><input id="article-url" type="url" inputmode="url" placeholder="https://www.example.com/article" autocomplete="off" maxlength="2048"><button id="extract-button" class="button button-secondary" type="button">Load article</button></div><p class="field-hint">We’ll extract the text so you can review it before analysis.</p></div>
+            <div id="loaded-source" class="loaded-source" hidden></div>
+            <label class="sr-only" for="article-text">Article or claim in English</label>
+            <textarea id="article-text" maxlength="30000" spellcheck="false" placeholder="Paste an English article or a specific claim here…&#10;&#10;The model will compare selected claims with retrieved or supplied evidence." aria-describedby="input-hint input-counter claim-guidance"></textarea>
+            <div class="input-meta"><span id="input-hint">English text · up to 30,000 characters</span><span id="input-counter">0 words</span></div>
+            <p id="claim-guidance" class="field-hint claim-input-hint">Use a complete English claim. Keep quotes and who said them; mixed-language text may need review.</p>
+            <p id="input-feedback" class="input-feedback" aria-live="polite" hidden></p>
+            <details id="supplied-evidence" class="supplied-evidence"><summary>Have a source? <span>Optional</span></summary><div class="evidence-input-fields"><label class="field-label" for="evidence-text">Evidence text</label><textarea id="evidence-text" maxlength="20000" spellcheck="false" placeholder="Paste a relevant source passage to compare against the article. It is treated as supplied evidence, not automatically verified." rows="4"></textarea><label class="field-label" for="evidence-url">Evidence source URL <span>(optional)</span></label><input id="evidence-url" type="url" inputmode="url" maxlength="2048" placeholder="https://www.example.com/source" autocomplete="off"><p class="field-hint">With a passage, the URL is its citation. With only a URL, we’ll try to load that source.</p></div></details>
+            <div class="search-control"><label class="search-toggle" for="search-web"><input id="search-web" type="checkbox" aria-describedby="search-privacy" checked><span>Search the web for relevant sources</span></label><p id="search-privacy" class="field-hint">Search sends short claim queries to Exa. Do not paste private information.</p></div>
+            <div class="input-actions"><button id="analyze-button" class="button button-primary" type="button"><span class="button-label">Check claims</span><svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg><span class="spinner" aria-hidden="true" hidden></span></button><span class="shortcut">Ctrl + Enter</span></div>
+            <div id="examples-block" class="examples-block" hidden><p class="examples-label">Or try a claim-and-evidence example</p><div id="example-buttons" class="example-buttons"></div><p id="example-caption" class="example-caption" hidden></p></div>
+          </section>
+          <section class="card result-card" aria-labelledby="result-heading" aria-live="polite" aria-busy="false">
+            <div class="card-heading"><div><span class="step-label">02 / SOURCE COMPARISON</span><h2 id="result-heading">The perspective</h2></div><span id="result-badge" class="small-tag">Ready when you are</span></div>
+            <div id="result-empty" class="empty-result"><div class="paper-illustration" aria-hidden="true"><svg viewBox="0 0 160 150"><rect x="34" y="20" width="89" height="112" rx="5" class="paper-back" transform="rotate(-8 78 76)"/><rect x="38" y="16" width="89" height="112" rx="5" class="paper-front"/><path d="M53 34h59M53 45h33M53 83h47M53 94h59M53 105h36" class="paper-line"/><rect x="53" y="57" width="29" height="17" rx="2" class="paper-block"/><path d="M91 60h21m-21 9h17" class="paper-line"/><circle cx="116" cy="105" r="22" class="lens"/><path d="m132 121 15 16" class="lens-handle"/><path d="m109 105 5 5 10-12" class="lens-check"/></svg></div><h3>Look beyond the headline.</h3><p>Check a claim, read the cited passages, and decide what needs a closer look.</p><span class="empty-footnote">Evidence first. Uncertainty included.</span></div>
+            <div id="result-loading" class="loading-result" hidden><span class="large-spinner" aria-hidden="true"></span><h3>Checking claims and sources…</h3><p id="check-wait-note">Waiting for the server to finish the comparison.</p><p id="check-elapsed" class="check-elapsed" aria-live="off">0 s elapsed</p></div>
+            <div id="result-error" class="error-result" hidden><span class="error-icon" aria-hidden="true">!</span><h3>We couldn’t finish that check.</h3><p id="result-error-message"></p><button id="retry-button" type="button" class="button button-secondary">Try again</button></div>
+            <div id="result-content" hidden>
+              <div id="assessment-banner" class="assessment-banner"><span id="assessment-icon" class="assessment-icon" aria-hidden="true"></span><div><p id="assessment-kicker" class="assessment-kicker">Compared with cited evidence</p><h3 id="assessment-label"></h3></div></div><p id="assessment-reason" class="assessment-reason"></p>
+              <div id="coverage-summary" class="coverage-summary"></div><p id="coverage-note" class="coverage-note"></p><p id="source-usage-summary" class="source-usage-summary"></p><div id="search-status" class="search-status" hidden></div>
+              <div class="claims-heading"><h4>Claim by claim</h4><span>Open a claim to inspect the evidence</span></div><div id="claims-list" class="claims-list"></div>
+              <details id="sources-panel" class="sources-panel" hidden><summary>Related sources found <span id="source-count"></span></summary><div id="sources-list"></div></details>
+              <div id="result-test-performance" class="result-test-performance" hidden><p>Model test performance <span>— not a score for this article</span></p><div id="result-test-statistics"></div></div>
+              <div class="result-bottom"><button type="button" class="text-button" data-open-results>See model results & limitations <span aria-hidden="true">→</span></button></div><div id="prediction-limitations" class="prediction-limitations" hidden></div>
+            </div>
+            <div class="result-note"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5m0-9v.5"/></svg><p>“Supported” means the claim agrees with cited evidence. It does not prove the source—or the claim—is true.</p></div>
+          </section>
+        </div>
+        <div class="under-workspace"><p><span aria-hidden="true">✳</span> Read the passage. Open the source. Keep the context.</p><button type="button" class="text-button" data-open-results>See how the model was tested <span aria-hidden="true">→</span></button></div>
+      </section>
+      <section id="panel-results" class="view" role="tabpanel" aria-labelledby="tab-results" hidden>
+        <div class="results-intro"><div><p class="eyebrow"><span class="tiny-rule"></span> TRANSPARENT BY DESIGN</p><h1>The numbers<br><em>behind the model.</em></h1><p class="intro-copy">Measured performance on unseen claim-and-evidence pairs.<br class="desktop-break"> These scores test the language model, not every step of web fact-checking.</p></div><a id="download-metrics" class="button button-secondary" href="/api/metrics?download=1" download="news-lens-evidence-evaluation.json" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg>Download results</a></div>
+        <div id="metrics-loading" class="state-card"><span class="spinner" aria-hidden="true"></span><p>Loading the recorded evaluation…</p></div><div id="metrics-unavailable" class="state-card" hidden><h2>Evaluation isn’t available yet.</h2><p id="metrics-error-message">The new evidence model’s measured results will appear after evaluation finishes.</p><button id="reload-metrics" type="button" class="button button-secondary">Refresh results</button></div>
+        <div id="metrics-content" hidden>
+          <div class="evaluation-meta"><span id="evaluation-model" class="small-tag"></span><span id="evaluation-count"></span><span id="evaluation-date"></span></div><p class="metric-scope">Three model classes: <strong>contradiction, entailment and neutral.</strong> Macro metrics give all three equal weight. Neutral means the passage does not establish the claim.</p><div id="metric-cards" class="metric-grid"></div>
+          <div class="evaluation-grid"><section class="card evaluation-card"><div class="section-heading"><div><span class="step-label">WHERE IT GETS THINGS RIGHT & WRONG</span><h2>Confusion matrix</h2></div></div><div id="confusion-matrix"></div></section><section class="card evaluation-card"><div class="section-heading"><div><span class="step-label">A SIMPLE BASELINE</span><h2>Transformer vs. baseline</h2></div></div><p id="comparison-context" class="section-description"></p><div id="baseline-table"></div><div id="class-metrics"></div></section></div>
+          <section class="card evaluation-card dataset-performance"><div class="section-heading"><div><span class="step-label">BEYOND ONE COMBINED SCORE</span><h2>Performance by dataset</h2></div></div><div id="dataset-performance"></div><div id="external-performance"></div></section>
+          <div class="evaluation-grid"><section class="card evaluation-card"><div class="section-heading"><div><span class="step-label">HOW LEARNING PROGRESSED</span><h2>Training & validation loss</h2></div></div><div class="chart-legend"><span><i class="legend-swatch train-swatch"></i>Training</span><span><i class="legend-swatch val-swatch"></i>Validation</span></div><div id="learning-chart" class="learning-chart"></div><p class="chart-note">Validation selects the checkpoint. Test labels are not used to choose the model or its thresholds.</p></section><section class="card evaluation-card"><div class="section-heading"><div><span class="step-label">KNOWING WHEN TO PAUSE</span><h2>Thresholds & calibration</h2></div></div><div id="calibration-details"></div><p class="chart-note">Model confidence describes a predicted text relationship, not the probability that a real-world claim is true.</p></section></div>
+          <details class="card disclosure" open><summary><span><span class="step-label">THE DATA BEHIND THE RESULTS</span><span class="disclosure-title">Dataset & evaluation details</span></span><span class="disclosure-toggle" aria-hidden="true">+</span></summary><div id="dataset-details" class="disclosure-content"></div></details>
+          <details class="card disclosure"><summary><span><span class="step-label">THE IMPORTANT CONCEPTS</span><span class="disclosure-title">How the model learns</span></span><span class="disclosure-toggle" aria-hidden="true">+</span></summary><div id="concepts-list" class="disclosure-content concepts-grid"></div></details><section class="limitations-section"><h2>What these results don’t promise</h2><ul id="limitations-list"></ul></section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>news<span class="brand-light">lens</span><span class="brand-dot">.</span></span><p>Built for a more thoughtful second look.</p><a href="#results">Model transparency <span aria-hidden="true">↗</span></a></footer>
+  </div><div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

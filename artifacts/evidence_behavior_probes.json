@@ -1,0 +1,331 @@
+{
+  "created_utc": "2026-10-25T14:46:32.949146+00:00",
+  "purpose": "Fixed illustrative diagnostics, not a benchmark, truth verification or accuracy estimate.",
+  "used_for_training_or_calibration": false,
+  "model_sha256": "8e4d137703353761d9ee407613920a4c5a539214e5509dd2feb7fcf9737754d4",
+  "temperature": 1.2155747944392563,
+  "thresholds": {
+    "contradiction": 0.91,
+    "entailment": 0.95
+  },
+  "minimum_margin": 0.15,
+  "elapsed_seconds": 0.36039789999631466,
+  "cases": [
+    {
+      "name": "animal_entailment",
+      "evidence": "A golden retriever is sleeping on the rug.",
+      "claim": "An animal is sleeping on the rug.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.0039795244524351795,
+          "entailment": 0.9759687840969281,
+          "neutral": 0.020051691450636802
+        },
+        "relation": "entailment",
+        "raw_relation": "entailment",
+        "confidence": 0.9759687840969281,
+        "truncated": false,
+        "token_count": 22
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "animal_contradiction",
+      "evidence": "A golden retriever is sleeping on the rug.",
+      "claim": "No dog is sleeping on the rug.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9466781996772794,
+          "entailment": 0.03591490963102705,
+          "neutral": 0.017406890691693596
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9466781996772794,
+        "truncated": false,
+        "token_count": 22
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "animal_missing_information",
+      "evidence": "A golden retriever is sleeping on the rug.",
+      "claim": "The dog is five years old.",
+      "intended_relation": "neutral",
+      "actual": {
+        "scores": {
+          "contradiction": 0.015043083234756387,
+          "entailment": 0.009494636566341237,
+          "neutral": 0.9754622801989025
+        },
+        "relation": "neutral",
+        "raw_relation": "neutral",
+        "confidence": 0.9754622801989025,
+        "truncated": false,
+        "token_count": 21
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "approval_entailment",
+      "evidence": "The town board approved the construction permit at its meeting.",
+      "claim": "The construction permit was approved by the town board.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.005519467981852797,
+          "entailment": 0.9804217993194456,
+          "neutral": 0.014058732698701462
+        },
+        "relation": "entailment",
+        "raw_relation": "entailment",
+        "confidence": 0.9804217993194456,
+        "truncated": false,
+        "token_count": 25
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "approval_negation",
+      "evidence": "The town board approved the construction permit at its meeting.",
+      "claim": "The town board did not approve the construction permit at its meeting.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9384952962260742,
+          "entailment": 0.020705687352074755,
+          "neutral": 0.040799016421851124
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9384952962260742,
+        "truncated": false,
+        "token_count": 28
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "approval_contraction",
+      "evidence": "The town board approved the construction permit at its meeting.",
+      "claim": "The town board didn't approve the construction permit at its meeting.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9443530754954533,
+          "entailment": 0.015144110889222831,
+          "neutral": 0.040502813615323804
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9443530754954533,
+        "truncated": false,
+        "token_count": 28
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "date_match",
+      "evidence": "The Riverton library first opened on 12 March 2024.",
+      "claim": "The Riverton library first opened on 12 March 2024.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.0076055356652209955,
+          "entailment": 0.9824959618248266,
+          "neutral": 0.009898502509952523
+        },
+        "relation": "entailment",
+        "raw_relation": "entailment",
+        "confidence": 0.9824959618248266,
+        "truncated": false,
+        "token_count": 26
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "date_difference",
+      "evidence": "The Riverton library first opened on 12 March 2024.",
+      "claim": "The Riverton library first opened on 13 March 2024.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9253793327270057,
+          "entailment": 0.03937976929030895,
+          "neutral": 0.03524089798268545
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9253793327270057,
+        "truncated": false,
+        "token_count": 26
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "equivalent_units",
+      "evidence": "The bridge is exactly three kilometers long.",
+      "claim": "The bridge is exactly three thousand meters long.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9296573595483891,
+          "entailment": 0.02114500512019299,
+          "neutral": 0.04919763533141786
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9296573595483891,
+        "truncated": false,
+        "token_count": 21
+      },
+      "raw_matches_intended": false,
+      "decisive_error": true,
+      "withheld_decision": false
+    },
+    {
+      "name": "changed_units",
+      "evidence": "The bridge is exactly three kilometers long.",
+      "claim": "The bridge is exactly three meters long.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.8314753137276726,
+          "entailment": 0.09033205586302394,
+          "neutral": 0.07819263040930348
+        },
+        "relation": "neutral",
+        "raw_relation": "contradiction",
+        "confidence": 0.8314753137276726,
+        "truncated": false,
+        "token_count": 20
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": true
+    },
+    {
+      "name": "number_match",
+      "evidence": "The study enrolled exactly 120 participants.",
+      "claim": "Exactly 120 participants were enrolled in the study.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.0052866692094429854,
+          "entailment": 0.9725699110385719,
+          "neutral": 0.02214341975198506
+        },
+        "relation": "entailment",
+        "raw_relation": "entailment",
+        "confidence": 0.9725699110385719,
+        "truncated": false,
+        "token_count": 20
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "number_difference",
+      "evidence": "The study enrolled exactly 120 participants.",
+      "claim": "The study enrolled exactly 1200 participants.",
+      "intended_relation": "contradiction",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9573922079476718,
+          "entailment": 0.01630801230293454,
+          "neutral": 0.02629977974939371
+        },
+        "relation": "contradiction",
+        "raw_relation": "contradiction",
+        "confidence": 0.9573922079476718,
+        "truncated": false,
+        "token_count": 18
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "numerical_comparison",
+      "evidence": "The study enrolled exactly 120 participants.",
+      "claim": "The study enrolled more than 100 participants.",
+      "intended_relation": "entailment",
+      "actual": {
+        "scores": {
+          "contradiction": 0.9098519754310287,
+          "entailment": 0.05321557973130162,
+          "neutral": 0.036932444837669755
+        },
+        "relation": "neutral",
+        "raw_relation": "contradiction",
+        "confidence": 0.9098519754310287,
+        "truncated": false,
+        "token_count": 19
+      },
+      "raw_matches_intended": false,
+      "decisive_error": false,
+      "withheld_decision": true
+    },
+    {
+      "name": "universal_not_established",
+      "evidence": "Some birds in the park are white.",
+      "claim": "All birds in the park are white.",
+      "intended_relation": "neutral",
+      "actual": {
+        "scores": {
+          "contradiction": 0.8107270195976402,
+          "entailment": 0.014182510476728529,
+          "neutral": 0.1750904699256312
+        },
+        "relation": "neutral",
+        "raw_relation": "contradiction",
+        "confidence": 0.8107270195976402,
+        "truncated": false,
+        "token_count": 20
+      },
+      "raw_matches_intended": false,
+      "decisive_error": false,
+      "withheld_decision": false
+    },
+    {
+      "name": "unrelated_information",
+      "evidence": "The train arrived at the station at noon.",
+      "claim": "Admission to the city museum is free.",
+      "intended_relation": "neutral",
+      "actual": {
+        "scores": {
+          "contradiction": 0.10567672200864424,
+          "entailment": 0.006994929329939689,
+          "neutral": 0.8873283486614161
+        },
+        "relation": "neutral",
+        "raw_relation": "neutral",
+        "confidence": 0.8873283486614161,
+        "truncated": false,
+        "token_count": 22
+      },
+      "raw_matches_intended": true,
+      "decisive_error": false,
+      "withheld_decision": false
+    }
+  ],
+  "application_note": "These measured scores predate the UI change that names abstention relation=review. raw_relation remains the actual learned class; scores, weights and thresholds were not changed."
+}
